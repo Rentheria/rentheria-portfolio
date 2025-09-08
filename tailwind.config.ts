@@ -1,29 +1,44 @@
-import type { Config } from 'tailwindcss';
-
+/** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ['class', 'media'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: '',
+  content: ['./src/**/*.{html,ts}'],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     extend: {
+      fontFamily: {
+        display: ['"Russo One"', 'system-ui', 'sans-serif'],
+        sans: ['"Inter"', 'system-ui', 'sans-serif'],
+        code: ['"JetBrains Mono"', 'monospace'],
+      },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        // Existing brand colors
+        brand: {
+          50: '#f2fbff',
+          100: '#dff4ff',
+          200: '#bfe9ff',
+          300: '#91daff',
+          400: '#57c4ff',
+          500: '#1ea7ff',
+          600: '#0a86d6',
+          700: '#086ba8',
+          800: '#0a557f',
+          900: '#0a4768',
+        },
+        spark: {
+          400: '#ffd54d',
+          500: '#ffbf00',
+          600: '#e6a700',
+        },
+        // Pokemon-Tech color system
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card-bg))',
+          foreground: 'hsl(var(--card-foreground))',
+          border: 'hsl(var(--card-border))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -32,26 +47,13 @@ export default {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-          border: 'hsl(var(--card-border))',
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
         success: {
           DEFAULT: 'hsl(var(--success))',
@@ -61,10 +63,17 @@ export default {
           DEFAULT: 'hsl(var(--warning))',
           foreground: 'hsl(var(--warning-foreground))',
         },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
         'grey-electric': {
           DEFAULT: 'hsl(var(--grey-electric))',
           foreground: 'hsl(var(--grey-electric-foreground))',
         },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',
           foreground: 'hsl(var(--sidebar-foreground))',
@@ -81,68 +90,42 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        'soft-neon': '0 0 32px rgba(30,167,255,.35)',
+        'electric-glow': 'var(--glow-electric)',
+        'cyber-glow': 'var(--glow-cyber)',
+        'psychic-glow': 'var(--glow-psychic)',
+        'card-shadow': 'var(--shadow-card)',
+      },
+      backgroundImage: {
+        'code-grid':
+          'radial-gradient(rgba(30,167,255,.12) 1px, transparent 1px), radial-gradient(rgba(255,191,0,.10) 1px, transparent 1px)',
+        'gradient-electric': 'var(--gradient-electric)',
+        'gradient-cyber': 'var(--gradient-cyber)',
+        'gradient-psychic': 'var(--gradient-psychic)',
+        'gradient-holographic': 'var(--gradient-holographic)',
+      },
+      backgroundSize: {
+        'grid-16': '16px 16px, 32px 32px',
+      },
       keyframes: {
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
         float: {
           '0%, 100%': {
-            transform: 'translateY(0px) rotate(0deg)',
+            transform: 'translateY(0px)',
           },
           '50%': {
-            transform: 'translateY(-20px) rotate(180deg)',
-          },
-        },
-        glow: {
-          from: {
-            filter: 'brightness(1) drop-shadow(0 0 5px currentColor)',
-          },
-          to: {
-            filter: 'brightness(1.2) drop-shadow(0 0 20px currentColor)',
-          },
-        },
-        holographic: {
-          '0%, 100%': {
-            'background-position': '0% 50%',
-          },
-          '50%': {
-            'background-position': '100% 50%',
-          },
-        },
-        typing: {
-          from: {
-            width: '0',
-          },
-          to: {
-            width: '100%',
+            transform: 'translateY(-10px)',
           },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        float: 'float 3s ease-in-out infinite',
-        glow: 'glow 2s ease-in-out infinite alternate',
-        holographic: 'holographic 3s ease-in-out infinite',
-        typing: 'typing 3.5s steps(40, end)',
-      },
-      fontFamily: {
-        code: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        float: 'float 5s ease-in-out infinite',
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
-} satisfies Config;
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
