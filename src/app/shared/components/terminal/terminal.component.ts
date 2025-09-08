@@ -34,14 +34,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './terminal.component.css',
 })
 export class TerminalComponent implements OnInit {
-  displayText = '"Rentheria"';
+  displayText = '"Alejandro Rentheria"';
 
   ngOnInit() {
     this.startTypingAnimation();
   }
 
   private startTypingAnimation() {
-    const fullText = '"Rentheria"';
+    const fullText = '"Alejandro Rentheria"';
     let currentIndex = 0;
 
     const typeInterval = setInterval(() => {

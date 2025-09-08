@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TerminalComponent } from './shared/components/terminal/terminal.component';
-import { EnergyOrbsComponent } from './shared/components/energy-orbs/energy-orbs.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-
 @Component({
   selector: 'app-root',
-  imports: [TerminalComponent, EnergyOrbsComponent, HeaderComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
