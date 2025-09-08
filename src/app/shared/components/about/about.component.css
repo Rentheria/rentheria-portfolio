@@ -1,0 +1,22 @@
+#about-img {
+  background-image: url("../../../../assets/IMG_2864.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient-border {
+  scale: 1.05;
+  box-shadow: var(--glow-electric);
+  animation: holographic 3s ease-in-out infinite;
+}
+
+@keyframes holographic {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
           <span class="keyword">const </span>
           <span class="variable">developer </span>
           <span class="operator">= </span>
-          <span class="keyword">new </span>
+          <span class="text-orange-400">new </span>
           <span class="class-name">SoftwareEngineer </span>
           <span class="operator">(</span>
           <span class="string terminal-cursor">{{ displayText }}</span>
@@ -34,14 +34,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './terminal.component.css',
 })
 export class TerminalComponent implements OnInit {
-  displayText = '"Alejandro Rentheria"';
+  displayText = '"Manuel Alejandro Hernandez Renteria"';
 
   ngOnInit() {
     this.startTypingAnimation();
   }
 
   private startTypingAnimation() {
-    const fullText = '"Alejandro Rentheria"';
+    const fullText = '"Manuel Alejandro Hernandez Renteria"';
     let currentIndex = 0;
 
     const typeInterval = setInterval(() => {

@@ -37,6 +37,11 @@
   --ork-rgb: 15, 100, 60;
   --ork-hex: #ff6633;
 
+  /* Psychic Accent (Pokemon Psychic) */
+  --psychic: 280 100% 60%;
+  --psychic-rgb: 187, 51, 255;
+  --psychic-hex: #bb33ff;
+
   /* Muted Tech */
   --muted: 220 20% 15%;
   --muted-foreground: 220 10% 60%;
@@ -271,6 +276,13 @@ body::before {
   animation: glow-btn-ork 5s ease-in-out infinite;
 }
 
+.glow-btn-psychic:hover {
+  transform: translateY(-2px);
+  background-color: hsl(280, 100%, 60%);
+  box-shadow: 0 5px 15px hsl(280, 100%, 60%);
+  animation: glow-btn-psychic 5s ease-in-out infinite;
+}
+
 @keyframes glow-btn-cyber {
   0% {
     box-shadow: 0 5px 15px hsl(210, 62%, 56%);
@@ -292,6 +304,18 @@ body::before {
   }
   100% {
     box-shadow: 0 5px 15px hsl(15, 68%, 63%);
+  }
+}
+
+@keyframes glow-btn-psychic {
+  0% {
+    box-shadow: 0 5px 15px hsl(280, 58%, 67%);
+  }
+  50% {
+    box-shadow: 0 5px 15px hsl(280, 100%, 60%);
+  }
+  100% {
+    box-shadow: 0 5px 15px hsl(280, 58%, 67%);
   }
 }
 
