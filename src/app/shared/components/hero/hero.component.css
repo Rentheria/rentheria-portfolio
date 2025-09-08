@@ -3,3 +3,14 @@
   max-height: 100vh;
   opacity: 0.1;
 }
+
+.tech-badge {
+  background-color: hsl(var(--card-bg));
+  box-shadow: 0 0 10px rgba(218, 214, 222, 0.8);
+  border-color: rgba(218, 214, 222, 0.8);
+}
+
+.tech-badges:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
