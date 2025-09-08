@@ -1,0 +1,154 @@
+/* Header Navigation */
+.header-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand/Logo Section */
+.header-brand {
+  flex: 1;
+  cursor: pointer;
+}
+
+.brand-text {
+  font-family: "Courier New", monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.brand-name {
+  color: white;
+}
+
+.brand-bracket {
+  color: #a855f7;
+}
+
+/* Desktop Navigation */
+.header-nav-desktop {
+  display: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .header-nav-desktop {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #a855f7;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.header-mobile-toggle {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .header-mobile-toggle {
+    display: none;
+  }
+}
+
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  color: #a855f7;
+}
+
+/* Mobile Menu */
+.header-mobile-menu {
+  display: none;
+  background-color: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.header-mobile-menu.show {
+  display: block;
+}
+
+.mobile-menu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link:hover {
+  color: white;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+
+  .brand-text {
+    font-size: 1.125rem;
+  }
+}
