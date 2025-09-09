@@ -4,6 +4,10 @@
   opacity: 0.1;
 }
 
+a {
+  min-width: 200px !important;
+}
+
 .tech-badge {
   background-color: hsl(var(--card-bg));
   box-shadow: 0 0 10px rgba(218, 214, 222, 0.8);

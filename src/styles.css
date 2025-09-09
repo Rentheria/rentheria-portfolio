@@ -489,3 +489,7 @@ body::before {
 .text-cyber {
   color: hsl(210, 65%, 60%);
 }
+
+h2 {
+  letter-spacing: 0.1em !important;
+}
