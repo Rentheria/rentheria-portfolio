@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FeatureProject } from '../../../../core/models/featureProject';
+import { FeatureProject } from '../../../core/models/featureProject';
 import { CommonModule } from '@angular/common';
 
 @Component({

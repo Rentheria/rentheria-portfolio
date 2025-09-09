@@ -69,6 +69,15 @@
 
   --radius: 0.75rem;
 
+  --electric-yellow: 56 100% 50%;
+  --psyched-purple: 280 100% 60%;
+  --cyber-cyan: 195 100% 55%;
+
+  --title-yellow: hsl(var(--electric-yellow));
+  --link-cyan: hsl(var(--cyber-cyan));
+  --chevron-purple: hsl(var(--psyched-purple));
+  --word-break: hsl(var(--ork));
+
   /* Custom Pokemon-Tech Gradients */
   --gradient-electric: linear-gradient(
     135deg,
@@ -492,4 +501,20 @@ body::before {
 
 h2 {
   letter-spacing: 0.1em !important;
+}
+
+/* utility colors for headings/buttons */
+.text-title-yellow {
+  color: var(--title-yellow);
+}
+.text-link-cyan {
+  color: var(--link-cyan);
+}
+.text-chev-purple {
+  color: var(--chevron-purple);
+}
+
+.text-link-word-break {
+  color: var(--word-break);
+  font-weight: bold;
 }

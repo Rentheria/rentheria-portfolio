@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { CardFeaturedProjectComponent } from '../card-featured-project/card-featured-project.component';
 import { CommonModule } from '@angular/common';
-import { FeatureProject } from '../../../../core/models/featureProject';
+import { FeatureProject } from '../../../core/models/featureProject';
 
 @Component({
   selector: 'app-project',
