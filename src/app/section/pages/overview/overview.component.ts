@@ -14,7 +14,6 @@ import { ToastComponent } from '../../../shared/components/toast/toast.component
     ProjectComponent,
     CareerHistoryComponent,
     ContactComponent,
-    ToastComponent,
   ],
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.css'],
