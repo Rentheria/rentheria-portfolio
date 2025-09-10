@@ -1,0 +1,44 @@
+/* Scroll-triggered animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific animation types */
+.scroll-animate[data-animation="fadeInUp"] {
+  transform: translateY(50px);
+}
+
+.scroll-animate[data-animation="fadeInUp"].animate {
+  transform: translateY(0);
+}
+
+.scroll-animate[data-animation="slideInLeft"] {
+  transform: translateX(-100px);
+}
+
+.scroll-animate[data-animation="slideInLeft"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="slideInRight"] {
+  transform: translateX(100px);
+}
+
+.scroll-animate[data-animation="slideInRight"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="scaleIn"] {
+  transform: scale(0.8);
+}
+
+.scroll-animate[data-animation="scaleIn"].animate {
+  transform: scale(1);
+}

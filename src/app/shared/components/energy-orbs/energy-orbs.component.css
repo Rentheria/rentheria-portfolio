@@ -1,0 +1,59 @@
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.floating-icon {
+  position: absolute;
+  z-index: 0;
+}
+
+.floating-icon:nth-child(1) {
+  top: 20%;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(2) {
+  top: 60%;
+  left: 85%;
+  animation: float 7s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(3) {
+  top: 80%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.energy-orb {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.energy-orb-electric {
+  background: var(--gradient-electric);
+  box-shadow: var(--glow-electric);
+}
+
+.energy-orb-cyber {
+  background: var(--gradient-cyber);
+  box-shadow: var(--glow-cyber);
+}
+
+.energy-orb-psychic {
+  background: var(--gradient-psychic);
+  box-shadow: var(--glow-psychic);
+}

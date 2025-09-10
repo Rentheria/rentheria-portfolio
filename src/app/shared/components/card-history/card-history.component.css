@@ -1,0 +1,64 @@
+/* vertical line + dots with neon glow */
+.timeline-line {
+  background: linear-gradient(180deg, hsl(56 100% 50%), hsl(120 60% 45%));
+  box-shadow: 0 0 14px hsl(56 100% 50% / 0.35);
+  opacity: 0.9;
+}
+.timeline-dot {
+  background: hsl(56 100% 50%);
+  box-shadow: 0 0 0 3px hsl(56 100% 50% / 0.15), 0 0 16px hsl(56 100% 50% / 0.7),
+    0 0 28px hsl(120 60% 45% / 0.45);
+  animation: pulse 2s infinite;
+  z-index: 10;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+/* card surface */
+.pokemon-card {
+  background-color: hsl(222 24% 10%);
+  border: 1px solid hsl(220 15% 18%);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pokemon-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -6px rgba(0, 0, 0, 0.7),
+    0 0 22px hsl(195 100% 50% / 0.25);
+}
+
+/* subhead + chips */
+.card-subhead {
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--chevron-purple);
+}
+
+/* tech chip: flat & clean */
+.tech-badge {
+  background: hsl(222 24% 12%);
+  border: 1px solid hsl(220 15% 22%);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+.tech-badge:hover {
+  transform: translateY(-1px);
+  border-color: hsl(195 100% 55% / 0.6);
+}
+
+/* rotation helper for chevron */
+.rotate-180 {
+  transform: rotate(180deg);
+}

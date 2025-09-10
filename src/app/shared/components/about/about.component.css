@@ -1,0 +1,128 @@
+#about-img {
+  background-image: url("../../../../assets/IMG_2864.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gradient-border {
+  scale: 1.05;
+  box-shadow: var(--glow-electric);
+  animation: holographic 3s ease-in-out infinite;
+}
+
+@keyframes holographic {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Scroll-triggered animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific animation types */
+.scroll-animate[data-animation="fadeInUp"] {
+  transform: translateY(50px);
+}
+
+.scroll-animate[data-animation="fadeInUp"].animate {
+  transform: translateY(0);
+}
+
+.scroll-animate[data-animation="slideInLeft"] {
+  transform: translateX(-100px);
+}
+
+.scroll-animate[data-animation="slideInLeft"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="slideInRight"] {
+  transform: translateX(100px);
+}
+
+.scroll-animate[data-animation="slideInRight"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="scaleIn"] {
+  transform: scale(0.8);
+}
+
+.scroll-animate[data-animation="scaleIn"].animate {
+  transform: scale(1);
+}
+
+/* Enhanced hover effects for skill cards */
+.skill-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Subtle pulse animation for the main content box */
+.content-box-pulse {
+  animation: contentPulse 4s ease-in-out infinite;
+}
+
+@keyframes contentPulse {
+  0%,
+  100% {
+    box-shadow: var(--glow-electric);
+  }
+  50% {
+    box-shadow: var(--glow-cyber);
+  }
+}
+
+/* Floating animation for particles */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive image sizing */
+@media (max-width: 768px) {
+  #about-img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #about-img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #about-img {
+    width: 320px;
+    height: 320px;
+  }
+}

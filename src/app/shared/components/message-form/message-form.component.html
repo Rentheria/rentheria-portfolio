@@ -1,0 +1,122 @@
+<div class="w-full border-2 border-gradient-psychic p-6 rounded-lg bg-gray-900">
+  <h3 class="text-3xl font-bold mb-6 font-extrabold tracking-widest">
+    <span class="gradient-text-electric">Send me a message</span>
+  </h3>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <!-- Name Field -->
+    <div class="mb-6 relative">
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        class="w-full bg-gray-800 text-white rounded-lg border px-4 py-3 focus:outline-none transition-colors input-field"
+        [class.border-red-500]="isFieldInvalid('name')"
+        [class.border-green-500]="isFieldValid('name')"
+        [class.border-gray-700]="
+          !isFieldInvalid('name') && !isFieldValid('name')
+        "
+        placeholder=" "
+      />
+      <label
+        for="name"
+        class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
+        [class.focused]="contactForm.get('name')?.value"
+        >Your Name</label
+      >
+      <div *ngIf="isFieldInvalid('name')" class="text-red-400 text-sm mt-1">
+        {{ getFieldError("name") }}
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="mb-6 relative">
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="w-full bg-gray-800 text-white rounded-lg border px-4 py-3 focus:outline-none transition-colors input-field"
+        [class.border-red-500]="isFieldInvalid('email')"
+        [class.border-green-500]="isFieldValid('email')"
+        [class.border-gray-700]="
+          !isFieldInvalid('email') && !isFieldValid('email')
+        "
+        placeholder=" "
+      />
+      <label
+        for="email"
+        class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
+        [class.focused]="contactForm.get('email')?.value"
+        >Your Email</label
+      >
+      <div *ngIf="isFieldInvalid('email')" class="text-red-400 text-sm mt-1">
+        {{ getFieldError("email") }}
+      </div>
+    </div>
+
+    <!-- Subject Field -->
+    <div class="mb-6 relative">
+      <input
+        type="text"
+        id="subject"
+        formControlName="subject"
+        class="w-full bg-gray-800 text-white rounded-lg border px-4 py-3 focus:outline-none transition-colors input-field"
+        [class.border-red-500]="isFieldInvalid('subject')"
+        [class.border-green-500]="isFieldValid('subject')"
+        [class.border-gray-700]="
+          !isFieldInvalid('subject') && !isFieldValid('subject')
+        "
+        placeholder=" "
+      />
+      <label
+        for="subject"
+        class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
+        [class.focused]="contactForm.get('subject')?.value"
+        >Subject</label
+      >
+      <div *ngIf="isFieldInvalid('subject')" class="text-red-400 text-sm mt-1">
+        {{ getFieldError("subject") }}
+      </div>
+    </div>
+
+    <!-- Message Field -->
+    <div class="mb-6 relative">
+      <textarea
+        id="message"
+        formControlName="message"
+        rows="5"
+        class="w-full bg-gray-800 text-white rounded-lg border px-4 py-3 focus:outline-none transition-colors input-field"
+        [class.border-red-500]="isFieldInvalid('message')"
+        [class.border-green-500]="isFieldValid('message')"
+        [class.border-gray-700]="
+          !isFieldInvalid('message') && !isFieldValid('message')
+        "
+        placeholder=" "
+      ></textarea>
+      <label
+        for="message"
+        class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
+        [class.focused]="contactForm.get('message')?.value"
+        >Your Message</label
+      >
+      <div *ngIf="isFieldInvalid('message')" class="text-red-400 text-sm mt-1">
+        {{ getFieldError("message") }}
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        type="submit"
+        [disabled]="contactForm.invalid || isSubmitting"
+        class="glow-btn w-full bg-yellow-500/90 text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <span *ngIf="!isSubmitting">Send Message</span>
+        <span *ngIf="isSubmitting" class="flex items-center">
+          <i class="fas fa-circle-notch fa-spin mr-2"></i>
+          Sending...
+        </span>
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,1 +1,525 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Global tokens with Pokemon-Tech color system */
+:root {
+  /* Existing tokens */
+  --card: 255 255 255;
+  --ink: 8 35 61;
+
+  /* Cyber Tech Background */
+  --background: 220 30% 3%;
+  --foreground: 210 40% 98%;
+
+  /* Card System (Pokemon-inspired) */
+  --card-bg: 220 25% 8%;
+  --card-foreground: 210 40% 98%;
+  --card-border: 210 60% 20%;
+
+  /* Popover */
+  --popover: 220 25% 8%;
+  --popover-foreground: 210 40% 98%;
+
+  /* Electric Primary (Pokemon Electric) */
+  --primary: 50 100% 50%;
+  --primary-foreground: 220 30% 3%;
+
+  /* Cyber Secondary */
+  --secondary: 195 100% 50%;
+  --secondary-rgb: 195, 100, 50;
+  --secondary-foreground: 220 30% 3%;
+
+  /* Psychic Accent (Pokemon Psychic) */
+  --accent: 280 100% 60%;
+  --accent-foreground: 210 40% 98%;
+
+  /* Ork Accent (Pokemon Ork) */
+  --ork: 15 100% 60%;
+  --ork-rgb: 15, 100, 60;
+  --ork-hex: #ff6633;
+
+  /* Psychic Accent (Pokemon Psychic) */
+  --psychic: 280 100% 60%;
+  --psychic-rgb: 187, 51, 255;
+  --psychic-hex: #bb33ff;
+
+  /* Muted Tech */
+  --muted: 220 20% 15%;
+  --muted-foreground: 220 10% 60%;
+
+  /* Success (Grass Pokemon) */
+  --success: 120 60% 50%;
+  --success-foreground: 220 30% 3%;
+
+  /* Warning (Fire Pokemon) */
+  --warning: 15 100% 60%;
+  --warning-foreground: 220 30% 3%;
+
+  /* Destructive */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Grey Electric */
+  --grey-electric: 220 20% 15%;
+  --grey-electric-foreground: 220 10% 60%;
+
+  /* Borders & Inputs */
+  --border: 220 20% 20%;
+  --input: 220 20% 15%;
+  --ring: 50 100% 50%;
+
+  --radius: 0.75rem;
+
+  --electric-yellow: 56 100% 50%;
+  --psyched-purple: 280 100% 60%;
+  --cyber-cyan: 195 100% 55%;
+
+  --title-yellow: hsl(var(--electric-yellow));
+  --link-cyan: hsl(var(--cyber-cyan));
+  --chevron-purple: hsl(var(--psyched-purple));
+  --word-break: hsl(var(--ork));
+
+  /* Custom Pokemon-Tech Gradients */
+  --gradient-electric: linear-gradient(
+    135deg,
+    hsl(50 100% 50%),
+    hsl(60, 100%, 50%)
+  );
+  --gradient-cyber: linear-gradient(
+    135deg,
+    hsl(195 100% 50%),
+    hsl(210 100% 60%)
+  );
+  --gradient-psychic: linear-gradient(
+    135deg,
+    hsl(280 100% 60%),
+    hsl(300 100% 70%)
+  );
+
+  --gradient-ork: linear-gradient(135deg, hsl(15 100% 60%), hsl(20 100% 70%));
+
+  --gradient-holographic: linear-gradient(
+    45deg,
+    hsl(50 100% 50%),
+    hsl(195 100% 50%),
+    hsl(280 100% 60%),
+    hsl(120 60% 50%)
+  );
+
+  /* Shadows & Glows */
+  --glow-electric: 0 0 30px hsl(50 100% 50% / 0.5);
+  --glow-cyber: 0 0 30px hsl(195 100% 50% / 0.5);
+  --glow-psychic: 0 0 30px hsl(280 100% 60% / 0.5);
+  --shadow-card: 0 10px 30px -5px hsl(220 30% 3% / 0.8);
+
+  /* Typography */
+  --font-code: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Sidebar */
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+
+  /* Additional variables for existing styles */
+  --dark: hsl(220 25% 8%);
+  --darker: hsl(220 30% 3%);
+  --primary-rgb: 255, 191, 0; /* Electric yellow RGB for glow effects */
+}
+
+/* Dark mode overrides */
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card-bg: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-rgb: 217.2, 32.6, 17.5;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-rgb: 217.2, 32.6, 17.5;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(
+        180deg,
+        rgba(10, 71, 104, 0.05),
+        rgba(10, 71, 104, 0)
+      )
+      no-repeat,
+    #0a0f1c;
+  color: rgb(var(--card));
+}
+
+/* subtle code-grid overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: var(--bg, none);
+  --bg: radial-gradient(rgba(30, 167, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Global utility classes */
+.code-font {
+  font-family: var(--font-code);
+}
+
+.neon-text {
+  text-shadow: var(--neon-glow);
+}
+
+.gradient-heading {
+  background-image: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--secondary) 50%,
+    var(--accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--darker), var(--darker)) padding-box,
+    linear-gradient(90deg, var(--primary), var(--secondary), var(--accent))
+      border-box;
+  border-radius: 1rem;
+}
+
+.tech-badge {
+  background-color: rgba(25, 30, 45, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  transition: all 0.3s;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.floating-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.floating-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.grid-pattern {
+  background-size: 50px 50px;
+  background-image: linear-gradient(
+      to right,
+      rgba(60, 70, 100, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(60, 70, 100, 0.1) 1px, transparent 1px);
+}
+
+.glow-btn {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(var(--primary-rgb), 0.5);
+}
+
+.glow-btn-cyber:hover {
+  transform: translateY(-2px);
+  background-color: hsl(210, 62%, 56%);
+  box-shadow: 0 5px 15px hsl(210 100% 60%);
+  animation: glow-btn-cyber 5s ease-in-out infinite;
+}
+
+.glow-btn-ork:hover {
+  transform: translateY(-2px);
+  background-color: hsl(15, 100%, 60%);
+  box-shadow: 0 5px 15px hsl(15, 100%, 60%);
+  animation: glow-btn-ork 5s ease-in-out infinite;
+}
+
+.glow-btn-psychic:hover {
+  transform: translateY(-2px);
+  background-color: hsl(280, 100%, 60%);
+  box-shadow: 0 5px 15px hsl(280, 100%, 60%);
+  animation: glow-btn-psychic 5s ease-in-out infinite;
+}
+
+@keyframes glow-btn-cyber {
+  0% {
+    box-shadow: 0 5px 15px hsl(210, 62%, 56%);
+  }
+  50% {
+    box-shadow: 0 5px 15px hsl(210 100% 60%);
+  }
+  100% {
+    box-shadow: 0 5px 15px hsl(210, 62%, 56%);
+  }
+}
+
+@keyframes glow-btn-ork {
+  0% {
+    box-shadow: 0 5px 15px hsl(15, 68%, 63%);
+  }
+  50% {
+    box-shadow: 0 5px 15px hsl(15 100% 60%);
+  }
+  100% {
+    box-shadow: 0 5px 15px hsl(15, 68%, 63%);
+  }
+}
+
+@keyframes glow-btn-psychic {
+  0% {
+    box-shadow: 0 5px 15px hsl(280, 58%, 67%);
+  }
+  50% {
+    box-shadow: 0 5px 15px hsl(280, 100%, 60%);
+  }
+  100% {
+    box-shadow: 0 5px 15px hsl(280, 58%, 67%);
+  }
+}
+
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s;
+  z-index: -1;
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid rgba(184, 95, 255, 0.3);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.timeline-item:last-child {
+  border-left: 2px solid transparent;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: var(--dark);
+  margin: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 90%;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.notification {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dark);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: bottom 0.3s ease;
+  z-index: 1000;
+}
+
+.notification.show {
+  bottom: 20px;
+}
+
+/* Pokemon-Tech specific utility classes */
+.pokemon-card {
+  background-color: hsl(var(--card-bg));
+  border: 1px solid hsl(var(--card-border));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pokemon-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--glow-electric);
+}
+
+.gradient-text-electric {
+  background: var(--gradient-electric);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyber {
+  background: var(--gradient-cyber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-psychic {
+  background: var(--gradient-psychic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+.text-cyber {
+  color: hsl(210, 65%, 60%);
+}
+
+h2 {
+  letter-spacing: 0.1em !important;
+}
+
+/* utility colors for headings/buttons */
+.text-title-yellow {
+  color: var(--title-yellow);
+}
+.text-link-cyan {
+  color: var(--link-cyan);
+}
+.text-chev-purple {
+  color: var(--chevron-purple);
+}
+
+.text-link-word-break {
+  color: var(--word-break);
+  font-weight: bold;
+}
+
+.border-gradient-psychic {
+  border: 1px solid
+    linear-gradient(90deg, var(--chevron-purple), var(--chevron-purple));
+}
