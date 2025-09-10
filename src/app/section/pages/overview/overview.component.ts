@@ -3,6 +3,8 @@ import { HeroComponent } from '../../../shared/components/hero/hero.component';
 import { AboutComponent } from '../../../shared/components/about/about.component';
 import { ProjectComponent } from '../../../shared/components/project/project.component';
 import { CareerHistoryComponent } from '../../../shared/components/career-history/career-history.component';
+import { ContactComponent } from '../../../shared/components/contact/contact.component';
+import { ToastComponent } from '../../../shared/components/toast/toast.component';
 
 @Component({
   selector: 'app-overview',
@@ -11,6 +13,8 @@ import { CareerHistoryComponent } from '../../../shared/components/career-histor
     AboutComponent,
     ProjectComponent,
     CareerHistoryComponent,
+    ContactComponent,
+    ToastComponent,
   ],
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.css'],

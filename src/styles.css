@@ -518,3 +518,8 @@ h2 {
   color: var(--word-break);
   font-weight: bold;
 }
+
+.border-gradient-psychic {
+  border: 1px solid
+    linear-gradient(90deg, var(--chevron-purple), var(--chevron-purple));
+}

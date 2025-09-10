@@ -1,0 +1,85 @@
+<div class="w-full border-2 border-gradient-psychic p-6 rounded-lg bg-gray-900">
+  <!-- Get In Touch Section -->
+  <div class="mb-10">
+    <h3 class="text-3xl font-bold mb-6 font-extrabold tracking-widest">
+      <span class="gradient-text-psychic">Get In Touch</span>
+    </h3>
+
+    <!-- Email Card -->
+    <div class="flex items-center mb-6 p-3 rounded-lg bg-gray-800">
+      <div
+        class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mr-4"
+      >
+        <i class="fas fa-envelope text-yellow-900 text-lg"></i>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-white/80">Email</p>
+        <p class="text-md text-gray-300/60">
+          {{ contactInformation?.email || "manuel.rentheria@gmail.com" }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Location Card -->
+    <div class="flex items-center mb-6 p-3 rounded-lg bg-gray-800">
+      <div
+        class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4"
+      >
+        <i class="fas fa-map-marker-alt text-blue-900 text-lg"></i>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-white/80">Location</p>
+        <p class="text-md text-gray-300/60">Available for Remote Work</p>
+      </div>
+    </div>
+
+    <!-- Coffee Chat Card -->
+    <div class="flex items-center mb-6 p-3 rounded-lg bg-gray-800">
+      <div
+        class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"
+      >
+        <i class="fas fa-coffee text-purple-900 text-lg"></i>
+      </div>
+      <div>
+        <p class="text-lg font-bold text-white/80">Coffee Chat</p>
+        <p class="text-md text-gray-300/60">Always open for tech discussions</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Separator Line -->
+  <div class="border-t border-gray-600 mb-6"></div>
+
+  <!-- Connect on Social Section -->
+  <div>
+    <h3
+      class="text-2xl font-bold mb-6 font-extrabold tracking-widest text-white"
+    >
+      Connect on Social
+    </h3>
+    <div class="flex flex-wrap gap-4">
+      <a
+        href="https://linkedin.com/in/manuel-rentheria"
+        target="_blank"
+        class="w-12 h-12 bg-transparent border border-gray-600 rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
+      >
+        <i class="fab fa-linkedin-in text-white text-lg"></i>
+      </a>
+      <a
+        href="https://github.com/rentheria"
+        target="_blank"
+        class="w-12 h-12 bg-transparent border border-gray-600 rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
+      >
+        <i class="fab fa-github text-white text-lg"></i>
+      </a>
+      <a
+        href="mailto:{{
+          contactInformation?.email || 'manuel.rentheria@gmail.com'
+        }}"
+        class="w-12 h-12 bg-transparent border border-gray-600 rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
+      >
+        <i class="fas fa-envelope text-white text-lg"></i>
+      </a>
+    </div>
+  </div>
+</div>
