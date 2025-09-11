@@ -18,4 +18,6 @@ export const DASHBOARD_ROUTES: Routes = [
       },
     ],
   },
+  { path: '**', redirectTo: 'overview' },
+  { path: '', redirectTo: 'overview', pathMatch: 'full' },
 ];
