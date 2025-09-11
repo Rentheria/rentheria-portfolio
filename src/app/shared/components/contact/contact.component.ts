@@ -11,7 +11,7 @@ import { MessageFormComponent } from '../message-form/message-form.component';
 })
 export class ContactComponent {
   readonly contactInformation: ContactInformation = {
-    email: 'manuel.rentheria@gmail.com',
+    email: 'rentheria.dev@gmail.com',
     phone: '+523334714285',
     address: 'Zapopan, Jalisco, Mexico',
     location: 'Available for Remote Work',
