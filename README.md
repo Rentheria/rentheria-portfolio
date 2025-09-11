@@ -9,7 +9,7 @@
 
 **A cutting-edge portfolio showcasing 5+ years of enterprise software development expertise**
 
-[🌐 Live Demo](https://rentheria.github.io/rentheria-portfolio/overview) • [📧 Contact](mailto:rentheria.dev@gmail.com) • [ LinkedIn](https://linkedin.com/in/rentheria)
+[🌐 Live Demo](https://rentheria-portfolio.web.app/overview) • [📧 Contact](mailto:rentheria.dev@gmail.com) • [ LinkedIn](https://linkedin.com/in/rentheria)
 
 </div>
 
