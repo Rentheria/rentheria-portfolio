@@ -11,27 +11,18 @@
 
     <!-- Desktop Navigation -->
     <div class="header-nav-desktop">
-      <a href="#about" class="nav-link" (click)="scrollToSection('about')">{{
+      <span class="nav-link" (click)="scrollToSection('about')">{{
         "nav.about" | translate
-      }}</a>
-      <a
-        href="#projects"
-        class="nav-link"
-        (click)="scrollToSection('projects')"
-        >{{ "nav.projects" | translate }}</a
-      >
-      <a
-        href="#experience"
-        class="nav-link"
-        (click)="scrollToSection('experience')"
-        >{{ "nav.experience" | translate }}</a
-      >
-      <a
-        href="#contact"
-        class="nav-link"
-        (click)="scrollToSection('contact')"
-        >{{ "nav.contact" | translate }}</a
-      >
+      }}</span>
+      <span class="nav-link" (click)="scrollToSection('projects')">{{
+        "nav.projects" | translate
+      }}</span>
+      <span class="nav-link" (click)="scrollToSection('experience')">{{
+        "nav.experience" | translate
+      }}</span>
+      <span class="nav-link" (click)="scrollToSection('contact')">{{
+        "nav.contact" | translate
+      }}</span>
 
       <!-- Language Switcher -->
       <app-language-switcher></app-language-switcher>
@@ -57,30 +48,18 @@
     [class.show]="isMobileMenuOpen"
   >
     <div class="mobile-menu-container">
-      <a
-        href="#about"
-        class="mobile-nav-link"
-        (click)="scrollToSection('about')"
-        >{{ "nav.about" | translate }}</a
-      >
-      <a
-        href="#projects"
-        class="mobile-nav-link"
-        (click)="scrollToSection('projects')"
-        >{{ "nav.projects" | translate }}</a
-      >
-      <a
-        href="#experience"
-        class="mobile-nav-link"
-        (click)="scrollToSection('experience')"
-        >{{ "nav.experience" | translate }}</a
-      >
-      <a
-        href="#contact"
-        class="mobile-nav-link"
-        (click)="scrollToSection('contact')"
-        >{{ "nav.contact" | translate }}</a
-      >
+      <span class="mobile-nav-link" (click)="scrollToSection('about')">{{
+        "nav.about" | translate
+      }}</span>
+      <span class="mobile-nav-link" (click)="scrollToSection('projects')">{{
+        "nav.projects" | translate
+      }}</span>
+      <span class="mobile-nav-link" (click)="scrollToSection('experience')">{{
+        "nav.experience" | translate
+      }}</span>
+      <span class="mobile-nav-link" (click)="scrollToSection('contact')">{{
+        "nav.contact" | translate
+      }}</span>
 
       <!-- Mobile Language Switcher -->
       <div class="mobile-language-switcher">
