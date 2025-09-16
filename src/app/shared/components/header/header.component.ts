@@ -26,6 +26,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   navigateToHome() {
     this.router.navigate(['/']);
     this.closeMobileMenu();
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   }
 
   toggleMobileMenu() {
@@ -52,10 +56,31 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Close mobile menu first
     this.closeMobileMenu();
+
+    // Navigate to home if not already there
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        this.scrollToElement(sectionId);
+      });
+    } else {
+      this.scrollToElement(sectionId);
+    }
+  }
+
+  private scrollToElement(sectionId: string) {
+    // Wait a bit for the page to load, then scroll
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      } else {
+        console.warn(`Section with id "${sectionId}" not found`);
+      }
+    }, 100);
   }
 }

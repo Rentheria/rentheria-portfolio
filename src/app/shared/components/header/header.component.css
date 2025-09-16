@@ -59,6 +59,19 @@
   transition: color 0.2s ease;
   position: relative;
   cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.mobile-nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: block;
 }
 
 .nav-link:hover {
