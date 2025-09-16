@@ -42,3 +42,93 @@
 .scroll-animate[data-animation="scaleIn"].animate {
   transform: scale(1);
 }
+
+/* Optimized scroll-triggered animations */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Specific animation types - simplified */
+.scroll-animate[data-animation="fadeInUp"] {
+  transform: translateY(30px);
+}
+
+.scroll-animate[data-animation="fadeInUp"].animate {
+  transform: translateY(0);
+}
+
+.scroll-animate[data-animation="slideInLeft"] {
+  transform: translateX(-50px);
+}
+
+.scroll-animate[data-animation="slideInLeft"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="slideInRight"] {
+  transform: translateX(50px);
+}
+
+.scroll-animate[data-animation="slideInRight"].animate {
+  transform: translateX(0);
+}
+
+.scroll-animate[data-animation="scaleIn"] {
+  transform: scale(0.95);
+}
+
+.scroll-animate[data-animation="scaleIn"].animate {
+  transform: scale(1);
+}
+
+/* Enhanced hover effects for skill cards */
+.skill-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Simplified pulse animation */
+.content-box-pulse {
+  animation: contentPulse 6s ease-in-out infinite;
+}
+
+@keyframes contentPulse {
+  0%,
+  100% {
+    box-shadow: var(--glow-electric);
+  }
+  50% {
+    box-shadow: var(--glow-cyber);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    transition: opacity 0.2s ease;
+    transform: none !important;
+  }
+
+  .scroll-animate.animate {
+    transform: none !important;
+  }
+
+  .gradient-border {
+    animation: none;
+  }
+
+  .content-box-pulse {
+    animation: none;
+  }
+}

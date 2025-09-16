@@ -11,27 +11,81 @@
 
     <!-- Desktop Navigation -->
     <div class="header-nav-desktop">
-      <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#experience" class="nav-link">Experience</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#about" class="nav-link" (click)="scrollToSection('about')">{{
+        "nav.about" | translate
+      }}</a>
+      <a
+        href="#projects"
+        class="nav-link"
+        (click)="scrollToSection('projects')"
+        >{{ "nav.projects" | translate }}</a
+      >
+      <a
+        href="#experience"
+        class="nav-link"
+        (click)="scrollToSection('experience')"
+        >{{ "nav.experience" | translate }}</a
+      >
+      <a
+        href="#contact"
+        class="nav-link"
+        (click)="scrollToSection('contact')"
+        >{{ "nav.contact" | translate }}</a
+      >
+
+      <!-- Language Switcher -->
+      <app-language-switcher></app-language-switcher>
     </div>
 
     <!-- Mobile Menu Toggle -->
     <div class="header-mobile-toggle">
-      <button id="menu-toggle" class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
+      <button
+        id="menu-toggle"
+        class="mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+        [class.active]="isMobileMenuOpen"
+      >
+        <i class="fas fa-bars" [class.fa-times]="isMobileMenuOpen"></i>
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="header-mobile-menu">
+  <div
+    id="mobile-menu"
+    class="header-mobile-menu"
+    [class.show]="isMobileMenuOpen"
+  >
     <div class="mobile-menu-container">
-      <a href="#about" class="mobile-nav-link">About</a>
-      <a href="#projects" class="mobile-nav-link">Projects</a>
-      <a href="#experience" class="mobile-nav-link">Experience</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <a
+        href="#about"
+        class="mobile-nav-link"
+        (click)="scrollToSection('about')"
+        >{{ "nav.about" | translate }}</a
+      >
+      <a
+        href="#projects"
+        class="mobile-nav-link"
+        (click)="scrollToSection('projects')"
+        >{{ "nav.projects" | translate }}</a
+      >
+      <a
+        href="#experience"
+        class="mobile-nav-link"
+        (click)="scrollToSection('experience')"
+        >{{ "nav.experience" | translate }}</a
+      >
+      <a
+        href="#contact"
+        class="mobile-nav-link"
+        (click)="scrollToSection('contact')"
+        >{{ "nav.contact" | translate }}</a
+      >
+
+      <!-- Mobile Language Switcher -->
+      <div class="mobile-language-switcher">
+        <app-language-switcher></app-language-switcher>
+      </div>
     </div>
   </div>
 </nav>

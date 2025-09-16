@@ -1,8 +1,13 @@
 <div class="w-full border-2 border-gradient-psychic p-6 rounded-lg bg-gray-900">
   <!-- Get In Touch Section -->
   <div class="mb-10">
-    <h3 class="text-3xl font-bold mb-6 font-extrabold tracking-widest">
-      <span class="gradient-text-psychic">Get In Touch</span>
+    <h3 class="text-3xl mb-6 font-extrabold tracking-widest">
+      <span class="gradient-text-psychic">{{
+        "contact.title" | translate
+      }}</span>
+      <span class="gradient-text-cyber">{{
+        "contact.title2" | translate
+      }}</span>
     </h3>
 
     <!-- Email Card -->
@@ -13,7 +18,9 @@
         <i class="fas fa-envelope text-yellow-900 text-lg"></i>
       </div>
       <div>
-        <p class="text-lg font-bold text-white/80">Email</p>
+        <p class="text-lg font-bold text-white/80">
+          {{ "contact.email" | translate }}
+        </p>
         <p class="text-md text-gray-300/60">
           {{ contactInformation?.email || "manuel.rentheria@gmail.com" }}
         </p>
@@ -28,8 +35,12 @@
         <i class="fas fa-map-marker-alt text-blue-900 text-lg"></i>
       </div>
       <div>
-        <p class="text-lg font-bold text-white/80">Location</p>
-        <p class="text-md text-gray-300/60">Available for Remote Work</p>
+        <p class="text-lg font-bold text-white/80">
+          {{ "contact.location" | translate }}
+        </p>
+        <p class="text-md text-gray-300/60">
+          {{ "contact.locationText" | translate }}
+        </p>
       </div>
     </div>
 
@@ -41,8 +52,12 @@
         <i class="fas fa-coffee text-purple-900 text-lg"></i>
       </div>
       <div>
-        <p class="text-lg font-bold text-white/80">Coffee Chat</p>
-        <p class="text-md text-gray-300/60">Always open for tech discussions</p>
+        <p class="text-lg font-bold text-white/80">
+          {{ "contact.coffee" | translate }}
+        </p>
+        <p class="text-md text-gray-300/60">
+          {{ "contact.coffeeText" | translate }}
+        </p>
       </div>
     </div>
   </div>
@@ -52,10 +67,8 @@
 
   <!-- Connect on Social Section -->
   <div>
-    <h3
-      class="text-2xl font-bold mb-6 font-extrabold tracking-widest text-white"
-    >
-      Connect on Social
+    <h3 class="text-2xl mb-6 font-extrabold tracking-widest text-white">
+      {{ "contact.social" | translate }}
     </h3>
     <div class="flex flex-wrap gap-4">
       <a
