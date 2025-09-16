@@ -9,31 +9,36 @@
   <app-energy-orbs></app-energy-orbs>
   <section class="z-10 relative w-full h-full justify-center items-center">
     <app-terminal></app-terminal>
-    <div
-      class="w-full mb-8 md:mb-0 text-center px-4 mt-10 max-w-4xl mx-auto px-6"
-    >
+    <div class="w-full mb-8 md:mb-0 text-center mt-10 max-w-4xl mx-auto px-6">
       <h1
         class="hero-title text-5xl md:text-7xl font-bold animate__animated animate__fadeIn mb-8"
       >
-        <span class="gradient-text-electric">Software </span>
-        <span class="gradient-text-cyber">Development </span>
-        <span class="gradient-text-psychic">Engineer </span>
+        <span class="gradient-text-electric"
+          >{{ "hero.title.software" | translate }}
+        </span>
+        <span class="gradient-text-cyber"
+          >{{ "hero.title.development" | translate }}
+        </span>
+        <span class="gradient-text-psychic">{{
+          "hero.title.engineer" | translate
+        }}</span>
       </h1>
       <section
         class="text-gray-300 text-2xl mb-2 animate__animated animate__fadeIn animate__delay-1s"
       >
         <p>
-          Software Engineer with
-          <span class="text-yellow-400 font-bold">5+ years</span> of experience
-          delivering enterprise applications and building digital products.
+          {{ "hero.subtitle.experience" | translate }}
+          <span class="text-yellow-400 font-bold">{{
+            "hero.subtitle.years" | translate
+          }}</span>
+          {{ "hero.subtitle.experienceText" | translate }}
         </p>
         <p>
-          Specialized in
+          {{ "hero.subtitle.specialized" | translate }}
           <span class="text-blue-400 font-semibold">Angular</span>,
           <span class="text-purple-400 font-semibold">Ionic</span>, and
-          <span class="text-orange-400 font-semibold">NestJS</span> — creating
-          scalable, high-impact solutions while staying ahead of emerging
-          technologies.
+          <span class="text-orange-400 font-semibold">NestJS</span>
+          {{ "hero.subtitle.creating" | translate }}
         </p>
       </section>
 
@@ -51,21 +56,24 @@
       >
         <a
           href="#projects"
-          class="glow-btn bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center"
+          class="glow-btn bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
-          <i class="fas fa-bolt mr-2"></i> View My Work
+          <i class="fas fa-bolt mr-2"></i>
+          {{ "hero.button.viewWork" | translate }}
         </a>
         <a
           href="#experience"
-          class="glow-btn-ork bg-orange-400 hover:bg-orange-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center"
+          class="glow-btn-ork bg-orange-400 hover:bg-orange-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
-          <i class="fas fa-briefcase mr-2"></i> Experience
+          <i class="fas fa-briefcase mr-2"></i>
+          {{ "hero.button.experience" | translate }}
         </a>
         <a
           href="#contact"
-          class="glow-btn-cyber bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center"
+          class="glow-btn-cyber bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
-          <i class="fas fa-code mr-2"></i> Get In Touch
+          <i class="fas fa-code mr-2"></i>
+          {{ "hero.button.getInTouch" | translate }}
         </a>
       </div>
     </div>

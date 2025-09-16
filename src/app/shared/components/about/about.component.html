@@ -18,8 +18,10 @@
       data-animation="fadeInUp"
       data-delay="0"
     >
-      <span class="gradient-text-electric">About </span>
-      <span class="gradient-text-cyber">Me</span>
+      <span class="gradient-text-electric">{{
+        "about.title" | translate
+      }}</span>
+      <span class="gradient-text-cyber">{{ "about.title2" | translate }}</span>
     </h2>
 
     <div class="flex flex-col md:flex-row gap-10 items-center">
@@ -67,29 +69,11 @@
 
           <div class="relative z-10">
             <p class="mb-4 text-gray-300 leading-relaxed">
-              Manuel Alejandro Hernandez Renteria is a Web UI Developer with
-              over 5 years of experience in enterprise web and hybrid
-              application development. He has led and contributed to projects
-              involving Angular 17, micro-frontend architectures, and
-              cross-platform solutions built with Ionic and NestJS.
+              {{ "about.description1" | translate }}
             </p>
             <p class="text-gray-300 leading-relaxed">
-              His strengths include scalable front-end design, API integration,
-              CI/CD pipelines, and performance optimization. Known for
-              translating business needs into robust interfaces and
-              collaborating effectively within cross-functional Agile teams.
+              {{ "about.description2" | translate }}
             </p>
-
-            <!-- <div class="w-full flex flex-row justify-center mt-6">
-              <a
-                class="glow-btn-psychic bg-purple-400 hover:bg-purple-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center cursor-pointer transform hover:scale-105 transition-all duration-300 relative overflow-hidden group"
-              >
-                <span class="relative z-10">Know more about me</span>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></div>
-              </a>
-            </div> -->
           </div>
         </div>
 
@@ -109,12 +93,12 @@
             <h3
               class="font-medium group-hover:text-yellow-400 transition-colors duration-300"
             >
-              Front-end
+              {{ "about.skills.frontend" | translate }}
             </h3>
             <p
               class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
             >
-              Angular, TypeScript
+              {{ "about.skills.frontendDesc" | translate }}
             </p>
           </div>
 
@@ -133,12 +117,12 @@
             <h3
               class="font-medium group-hover:text-blue-400 transition-colors duration-300"
             >
-              Mobile
+              {{ "about.skills.mobile" | translate }}
             </h3>
             <p
               class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
             >
-              Ionic, Hybrid Apps
+              {{ "about.skills.mobileDesc" | translate }}
             </p>
           </div>
 
@@ -157,12 +141,12 @@
             <h3
               class="font-medium group-hover:text-purple-400 transition-colors duration-300"
             >
-              Back-end
+              {{ "about.skills.backend" | translate }}
             </h3>
             <p
               class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
             >
-              NestJS, Spring
+              {{ "about.skills.backendDesc" | translate }}
             </p>
           </div>
 
@@ -181,12 +165,12 @@
             <h3
               class="font-medium group-hover:text-green-400 transition-colors duration-300"
             >
-              DevOps
+              {{ "about.skills.devops" | translate }}
             </h3>
             <p
               class="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300"
             >
-              CI/CD, Firebase
+              {{ "about.skills.devopsDesc" | translate }}
             </p>
           </div>
         </div>

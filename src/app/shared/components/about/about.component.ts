@@ -5,9 +5,12 @@ import {
   HostListener,
   OnDestroy,
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-about',
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })

@@ -1,6 +1,6 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
-import { CardFeaturedProjectComponent } from '../card-featured-project/card-featured-project.component';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardFeaturedProjectComponent } from '../card-featured-project/card-featured-project.component';
 import { FeatureProject } from '../../../core/models/featureProject';
 
 @Component({
@@ -9,51 +9,7 @@ import { FeatureProject } from '../../../core/models/featureProject';
   templateUrl: './project.component.html',
   styleUrl: './project.component.css',
 })
-export class ProjectComponent implements OnInit, AfterViewInit, OnDestroy {
-  private observer!: IntersectionObserver;
-
-  ngOnInit(): void {
-    // this.setupScrollAnimations();
-  }
-
-  ngAfterViewInit(): void {
-    this.setupScrollAnimations();
-  }
-
-  ngOnDestroy(): void {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }
-
-  private setupScrollAnimations(): void {
-    // Create intersection observer
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
-            const delay = element.getAttribute('data-delay') || '0';
-
-            setTimeout(() => {
-              element.classList.add('animate');
-            }, parseInt(delay));
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
-      }
-    );
-
-    // Observe all elements with scroll-animate class
-    const animatedElements = document.querySelectorAll('.scroll-animate');
-    animatedElements.forEach((element) => {
-      this.observer.observe(element);
-    });
-  }
-
+export class ProjectComponent {
   readonly featuredProjects: FeatureProject[] = [
     {
       title: 'Swiss Premier - Mobile App',

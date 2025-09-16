@@ -8,7 +8,7 @@
 .gradient-border {
   scale: 1.05;
   box-shadow: var(--glow-electric);
-  animation: holographic 3s ease-in-out infinite;
+  animation: holographic 4s ease-in-out infinite;
 }
 
 @keyframes holographic {
@@ -21,11 +21,12 @@
   }
 }
 
-/* Scroll-triggered animations */
+/* Optimized scroll-triggered animations */
 .scroll-animate {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
 }
 
 .scroll-animate.animate {
@@ -33,9 +34,9 @@
   transform: translateY(0);
 }
 
-/* Specific animation types */
+/* Specific animation types - simplified */
 .scroll-animate[data-animation="fadeInUp"] {
-  transform: translateY(50px);
+  transform: translateY(30px);
 }
 
 .scroll-animate[data-animation="fadeInUp"].animate {
@@ -43,7 +44,7 @@
 }
 
 .scroll-animate[data-animation="slideInLeft"] {
-  transform: translateX(-100px);
+  transform: translateX(-50px);
 }
 
 .scroll-animate[data-animation="slideInLeft"].animate {
@@ -51,7 +52,7 @@
 }
 
 .scroll-animate[data-animation="slideInRight"] {
-  transform: translateX(100px);
+  transform: translateX(50px);
 }
 
 .scroll-animate[data-animation="slideInRight"].animate {
@@ -59,7 +60,7 @@
 }
 
 .scroll-animate[data-animation="scaleIn"] {
-  transform: scale(0.8);
+  transform: scale(0.95);
 }
 
 .scroll-animate[data-animation="scaleIn"].animate {
@@ -68,16 +69,16 @@
 
 /* Enhanced hover effects for skill cards */
 .skill-card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px) scale(1.05);
+  transform: translateY(-3px) scale(1.02);
 }
 
-/* Subtle pulse animation for the main content box */
+/* Simplified pulse animation */
 .content-box-pulse {
-  animation: contentPulse 4s ease-in-out infinite;
+  animation: contentPulse 6s ease-in-out infinite;
 }
 
 @keyframes contentPulse {
@@ -90,39 +91,29 @@
   }
 }
 
-/* Floating animation for particles */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    transition: opacity 0.2s ease;
+    transform: none !important;
   }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+  .scroll-animate.animate {
+    transform: none !important;
+  }
+
+  .gradient-border {
+    animation: none;
+  }
+
+  .content-box-pulse {
+    animation: none;
+  }
 }
 
 /* Responsive image sizing */
 @media (max-width: 768px) {
   #about-img {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  #about-img {
-    width: 300px;
     height: 300px;
-  }
-}
-
-@media (min-width: 1025px) {
-  #about-img {
-    width: 320px;
-    height: 320px;
   }
 }
