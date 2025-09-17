@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardFeaturedProjectComponent } from '../card-featured-project/card-featured-project.component';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 import { FeatureProject } from '../../../core/models/featureProject';
 
 @Component({
   selector: 'app-project',
-  imports: [CommonModule, CardFeaturedProjectComponent],
+  imports: [CommonModule, CardFeaturedProjectComponent, TranslatePipe],
   templateUrl: './project.component.html',
   styleUrl: './project.component.css',
 })
@@ -18,8 +19,7 @@ export class ProjectComponent {
         alt: 'Swiss Premier Mobile App - Debt Collection Application',
       },
       duration: 'May 2024 - Aug 2025',
-      description:
-        'Developed a comprehensive mobile debt collection application using Ionic and Angular 18 for field collectors (cobradores) to manage client routes, track payments (abonos), and generate reports. Built with Capacitor for cross-platform deployment on Android and iOS, featuring offline capabilities with SQLite, PDF generation, and real-time data synchronization.',
+      description: 'projects.swiss.mobile.description',
       technologies: [
         'Angular 18',
         'Ionic 8',
@@ -44,8 +44,7 @@ export class ProjectComponent {
         alt: 'Swiss Premier Web Dashboard - Administrative Interface',
       },
       duration: 'June 2025 - Aug 2025',
-      description:
-        'Designed and implemented a comprehensive web-based administrative dashboard for debt collection management using Angular 18 and Tailwind CSS. Features include route management, client administration, payment tracking (abonos), report generation, and user role management. Built with Angular Material components, Firebase integration, and responsive design for optimal user experience across devices.',
+      description: 'projects.swiss.web.description',
       technologies: [
         'Angular 18',
         'Tailwind CSS',
@@ -68,8 +67,7 @@ export class ProjectComponent {
         alt: 'IMTPaveExpress Web Application - Pavement Analysis Platform',
       },
       duration: 'March 2024 - Aug 2025',
-      description:
-        'Built a comprehensive Angular 17 web application for pavement analysis and project management. Features include real-time data visualization, interactive charts, spectral and probabilistic analysis forms, project management, user authentication, and responsive design. Integrated with backend APIs for pavement calculations, file uploads, and user management with Angular Material components and Chart.js for data visualization.',
+      description: 'projects.imtpx.web.description',
       technologies: [
         'Angular 17',
         'TypeScript',
@@ -95,8 +93,7 @@ export class ProjectComponent {
         alt: 'Cotizly SaaS Platform - Quote and Order Management System',
       },
       duration: 'June 2025 - current',
-      description:
-        'Designed and implemented a comprehensive SaaS platform for quote and order management using Angular 19 frontend and NestJS backend. Built multi-tenant architecture with enterprise-grade security, dynamic quote builder, product catalog management, and real-time analytics dashboard. Features JWT authentication, role-based access control, PDF/Excel export capabilities, and Firebase integration for scalable deployment.',
+      description: 'projects.cotizly.description',
       technologies: [
         'Angular 19',
         'NestJS',
@@ -121,8 +118,7 @@ export class ProjectComponent {
         alt: 'IMTPaveExpress Backend - Pavement Engineering Calculations API',
       },
       duration: 'March 2024 - Aug 2025',
-      description:
-        'Developed a high-performance Spring Boot REST API for pavement engineering calculations, performing structural and probabilistic analysis of road pavements. Features include stress, strain, and life prediction analysis under different traffic loads, with support for spectral and probabilistic analysis methods. Built with comprehensive caching, monitoring, and Docker containerization for scalable deployment.',
+      description: 'projects.imtpx.calculations.description',
       technologies: [
         'Java 17',
         'Spring Boot 3.5.3',
@@ -147,8 +143,7 @@ export class ProjectComponent {
         alt: 'IMTPaveExpress User Management - NestJS Backend API',
       },
       duration: 'March 2024 - Aug 2025',
-      description:
-        'Designed and implemented a comprehensive NestJS backend API for user management and project handling in the IMT-PAVE platform. Features include JWT authentication, user registration/login, password recovery, profile management, project file uploads (.imt format), and PostgreSQL integration. Built with TypeORM, Swagger documentation, role-based access control, and Firebase integration for file storage.',
+      description: 'projects.imtpx.users.description',
       technologies: [
         'NestJS',
         'TypeScript',
@@ -173,7 +168,7 @@ export class ProjectComponent {
         alt: 'Personal Portfolio Website - Angular and Tailwind CSS',
       },
       duration: 'August 2025',
-      description: 'My portfolio website built with Angular and Tailwind CSS.',
+      description: 'projects.portfolio.description',
       technologies: ['Angular', 'Tailwind CSS', 'TypeScript'],
     },
   ];

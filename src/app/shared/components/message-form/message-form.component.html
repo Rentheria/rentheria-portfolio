@@ -1,6 +1,8 @@
 <div class="w-full border-2 border-gradient-psychic p-6 rounded-lg bg-gray-900">
-  <h3 class="text-3xl font-bold mb-6 font-extrabold tracking-widest">
-    <span class="gradient-text-electric">Send me a message</span>
+  <h3 class="text-3xl mb-6 font-extrabold tracking-widest">
+    <span class="gradient-text-electric">{{
+      "contact.form.title" | translate
+    }}</span>
   </h3>
 
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
@@ -22,10 +24,10 @@
         for="name"
         class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
         [class.focused]="contactForm.get('name')?.value"
-        >Your Name</label
+        >{{ "contact.form.labels.name" | translate }}</label
       >
       <div *ngIf="isFieldInvalid('name')" class="text-red-400 text-sm mt-1">
-        {{ getFieldError("name") }}
+        {{ getFieldError("name") | translate }}
       </div>
     </div>
 
@@ -47,10 +49,10 @@
         for="email"
         class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
         [class.focused]="contactForm.get('email')?.value"
-        >Your Email</label
+        >{{ "contact.form.labels.email" | translate }}</label
       >
       <div *ngIf="isFieldInvalid('email')" class="text-red-400 text-sm mt-1">
-        {{ getFieldError("email") }}
+        {{ getFieldError("email") | translate }}
       </div>
     </div>
 
@@ -72,10 +74,10 @@
         for="subject"
         class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
         [class.focused]="contactForm.get('subject')?.value"
-        >Subject</label
+        >{{ "contact.form.labels.subject" | translate }}</label
       >
       <div *ngIf="isFieldInvalid('subject')" class="text-red-400 text-sm mt-1">
-        {{ getFieldError("subject") }}
+        {{ getFieldError("subject") | translate }}
       </div>
     </div>
 
@@ -97,10 +99,10 @@
         for="message"
         class="absolute text-gray-400 left-4 top-3 transition-all duration-300 pointer-events-none floating-label"
         [class.focused]="contactForm.get('message')?.value"
-        >Your Message</label
+        >{{ "contact.form.labels.message" | translate }}</label
       >
       <div *ngIf="isFieldInvalid('message')" class="text-red-400 text-sm mt-1">
-        {{ getFieldError("message") }}
+        {{ getFieldError("message") | translate }}
       </div>
     </div>
 
@@ -111,10 +113,10 @@
         [disabled]="contactForm.invalid || isSubmitting"
         class="glow-btn w-full bg-yellow-500/90 text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        <span *ngIf="!isSubmitting">Send Message</span>
+        <span *ngIf="!isSubmitting">{{ "contact.form.send" | translate }}</span>
         <span *ngIf="isSubmitting" class="flex items-center">
           <i class="fas fa-circle-notch fa-spin mr-2"></i>
-          Sending...
+          {{ "contact.form.sending" | translate }}
         </span>
       </button>
     </div>

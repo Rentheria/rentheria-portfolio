@@ -7,12 +7,13 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { ToastService } from '../../../core/services/toast.service';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-message-form',
   templateUrl: './message-form.component.html',
   styleUrl: './message-form.component.css',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, TranslatePipe],
 })
 export class MessageFormComponent implements OnInit {
   contactForm!: FormGroup;
@@ -59,23 +60,25 @@ export class MessageFormComponent implements OnInit {
     try {
       const subject = encodeURIComponent(this.contactForm.value.subject);
       const body = encodeURIComponent(
-        `Name: ${this.contactForm.value.name}\nEmail: ${this.contactForm.value.email}\n\nMessage:\n${this.contactForm.value.message}`
+        `${this.getFieldLabel('name')}: ${
+          this.contactForm.value.name
+        }\n${this.getFieldLabel('email')}: ${
+          this.contactForm.value.email
+        }\n\n${this.getFieldLabel('message')}:\n${
+          this.contactForm.value.message
+        }`
       );
 
       const mailtoUrl = `mailto:manuel.rentheria@gmail.com?subject=${subject}&body=${body}`;
 
       window.open(mailtoUrl, '_blank');
-      this.toastService.showSuccess(
-        'Email client opened! Please send the message from your email client.'
-      );
+      this.toastService.showSuccess('contact.form.success');
 
       this.resetForm();
       this.isSubmitting = false;
     } catch (error) {
       console.error('Error opening email client:', error);
-      this.toastService.showError(
-        'Failed to open email client. Please try again.'
-      );
+      this.toastService.showError('contact.form.error');
       this.isSubmitting = false;
     }
   }
@@ -89,22 +92,24 @@ export class MessageFormComponent implements OnInit {
     const field = this.contactForm.get(fieldName);
     if (field?.errors && field.touched) {
       if (field.errors['required']) {
-        return `${this.getFieldLabel(fieldName)} is required`;
+        return `${this.getFieldLabel(
+          fieldName
+        )} ${'contact.form.validation.required'}`;
       }
       if (field.errors['email']) {
-        return 'Please enter a valid email address';
+        return 'contact.form.validation.email';
       }
       if (field.errors['minlength']) {
         const requiredLength = field.errors['minlength'].requiredLength;
         return `${this.getFieldLabel(
           fieldName
-        )} must be at least ${requiredLength} characters`;
+        )} ${'contact.form.validation.minLength'} ${requiredLength} ${'contact.form.validation.characters'}`;
       }
       if (field.errors['maxlength']) {
         const maxLength = field.errors['maxlength'].requiredLength;
         return `${this.getFieldLabel(
           fieldName
-        )} must not exceed ${maxLength} characters`;
+        )} ${'contact.form.validation.maxLength'} ${maxLength} ${'contact.form.validation.characters'}`;
       }
     }
     return '';
@@ -112,10 +117,10 @@ export class MessageFormComponent implements OnInit {
 
   getFieldLabel(fieldName: string): string {
     const labels: { [key: string]: string } = {
-      name: 'Name',
-      email: 'Email',
-      subject: 'Subject',
-      message: 'Message',
+      name: 'contact.form.fields.name',
+      email: 'contact.form.fields.email',
+      subject: 'contact.form.fields.subject',
+      message: 'contact.form.fields.message',
     };
     return labels[fieldName] || fieldName;
   }

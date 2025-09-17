@@ -30,7 +30,8 @@
       <div class="absolute top-4 right-4">
         <div class="bg-gray-800/80 backdrop-blur-sm rounded-full px-3 py-1">
           <span class="text-yellow-400 text-xs font-medium"
-            >{{ project.technologies.length }} techs</span
+            >{{ project.technologies.length }}
+            {{ "projects.techs" | translate }}</span
           >
         </div>
       </div>
@@ -42,7 +43,7 @@
       </h3>
 
       <p class="text-gray-300 mb-4 leading-relaxed text-sm">
-        {{ project.description }}
+        {{ project.description | translate }}
       </p>
 
       <!-- Technology tags with theme colors -->
