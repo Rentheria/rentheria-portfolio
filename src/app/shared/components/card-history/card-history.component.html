@@ -15,7 +15,7 @@
       <div class="flex flex-row justify-between w-full gap-2">
         <div class="flex flex-col gap-2">
           <h3 class="text-title-yellow text-2xl font-extrabold mb-2">
-            {{ history.company }}
+            {{ history.company | translate }}
           </h3>
 
           <div
@@ -33,7 +33,7 @@
               ></path>
             </svg>
 
-            <span> {{ history.title }} </span>
+            <span> {{ history.title | translate }} </span>
           </div>
         </div>
         <div class="flex flex-col gap-2">
@@ -49,7 +49,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <span>{{ history.period }}</span>
+            <span>{{ history.period | translate }}</span>
           </div>
 
           <div class="flex items-center text-sm text-gray-100/90 text-lg">
@@ -64,7 +64,10 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <span>{{ history.location }} • {{ history.type }}</span>
+            <span
+              >{{ history.location | translate }} •
+              {{ history.type | translate }}</span
+            >
           </div>
         </div>
         <!-- <button (click)="onToggleClick()" class="p-1">
@@ -100,7 +103,9 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span class="text-xl">KEY ACHIEVEMENTS</span>
+          <span class="text-xl">{{
+            "experience.achievements" | translate
+          }}</span>
         </h4>
         <ul class="space-y-2">
           <li
@@ -112,10 +117,10 @@
             >
             <span>
               <span class="text-link-word-break">{{
-                getFirstWord(achievement)
+                getFirstWord(achievement | translate)
               }}</span>
-              <span *ngIf="getRestOfText(achievement)">
-                {{ getRestOfText(achievement) }}</span
+              <span *ngIf="getRestOfText(achievement | translate)">
+                {{ getRestOfText(achievement | translate) }}</span
               >
             </span>
           </li>
@@ -132,7 +137,9 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span class="text-xl">Technologies</span>
+          <span class="text-xl">{{
+            "experience.technologies" | translate
+          }}</span>
         </h4>
         <div class="flex flex-wrap gap-2">
           <span *ngFor="let tech of history.technologies" class="tech-badge">
