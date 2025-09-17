@@ -13,12 +13,12 @@
       <h1
         class="hero-title text-5xl md:text-7xl font-bold animate__animated animate__fadeIn mb-8"
       >
-        <span class="gradient-text-electric"
-          >{{ "hero.title.software" | translate }}
-        </span>
-        <span class="gradient-text-cyber"
-          >{{ "hero.title.development" | translate }}
-        </span>
+        <span class="gradient-text-electric">{{
+          "hero.title.software" | translate
+        }}</span>
+        <span class="gradient-text-cyber">{{
+          "hero.title.development" | translate
+        }}</span>
         <span class="gradient-text-psychic">{{
           "hero.title.engineer" | translate
         }}</span>
@@ -54,27 +54,27 @@
       <div
         class="flex flex-col sm:flex-row gap-4 animate__animated animate__fadeIn animate__delay-2s justify-center items-center w-full"
       >
-        <a
-          href="#projects"
+        <button
+          (click)="scrollToSection('projects')"
           class="glow-btn bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
           <i class="fas fa-bolt mr-2"></i>
           {{ "hero.button.viewWork" | translate }}
-        </a>
-        <a
-          href="#experience"
+        </button>
+        <button
+          (click)="scrollToSection('experience')"
           class="glow-btn-ork bg-orange-400 hover:bg-orange-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
           <i class="fas fa-briefcase mr-2"></i>
           {{ "hero.button.experience" | translate }}
-        </a>
-        <a
-          href="#contact"
+        </button>
+        <button
+          (click)="scrollToSection('contact')"
           class="glow-btn-cyber bg-blue-400 hover:bg-blue-500 text-gray-900 font-bold py-3 px-8 rounded-lg flex items-center justify-center min-w-[200px]"
         >
           <i class="fas fa-code mr-2"></i>
           {{ "hero.button.getInTouch" | translate }}
-        </a>
+        </button>
       </div>
     </div>
   </section>
