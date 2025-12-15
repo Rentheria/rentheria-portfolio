@@ -76,6 +76,8 @@ export class LanguageService {
         'Designed and implemented a comprehensive NestJS backend API for user management and project handling in the IMT-PAVE platform. Features include JWT authentication, user registration/login, password recovery, profile management, project file uploads (.imt format), and PostgreSQL integration. Built with TypeORM, Swagger documentation, role-based access control, and Firebase integration for file storage.',
       'projects.portfolio.description':
         'My portfolio website built with Angular and Tailwind CSS.',
+      'projects.orkesta.description':
+        'Comprehensive event management system allowing organizers to create and host events with digital invitations, intelligent RSVP, interactive table planning, automated messaging, and real-time check-in. Developed with Angular 19 (Standalone Components, Signals, SSR) and NestJS 11 (Modular Architecture, Prisma ORM). Features multi-role system, WhatsApp Business API integration, and scalable architecture deployed on Railway with Docker.',
 
       // Experience Section
       'experience.title': 'Professional ',
@@ -259,6 +261,8 @@ export class LanguageService {
         'Diseñé e implementé una API de backend NestJS completa para la gestión de usuarios y manejo de proyectos en la plataforma IMT-PAVE. Incluye autenticación JWT, registro/inicio de sesión de usuarios, recuperación de contraseña, gestión de perfil, subida de archivos de proyecto (.imt), y integración con PostgreSQL. Construido con TypeORM, documentación Swagger, control de acceso basado en roles y almacenamiento en Firebase para archivos.',
       'projects.portfolio.description':
         'Mi sitio web de portafolio construido con Angular y Tailwind CSS.',
+      'projects.orkesta.description':
+        'Sistema completo de gestión de eventos que permite a organizadores crear, gestionar y organizar eventos con invitaciones digitales, RSVP inteligente, planner de mesas interactivo, mensajería automatizada y check-in en tiempo real. Desarrollado con Angular 19 (Standalone Components, Signals, SSR) y NestJS 11 (Arquitectura modular, Prisma ORM). Implementa sistema multi-rol, integración con WhatsApp Business API, y arquitectura escalable desplegada en Railway con Docker.',
 
       // Experience Section
       'experience.title': 'Experiencia ',

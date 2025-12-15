@@ -109,7 +109,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .terminal-window {
-    margin: 0 16px;
+    margin: 20% 16px 0px 16px;
   }
 
   .code-line {

@@ -13,6 +13,28 @@ import { FeatureProject } from '../../../core/models/featureProject';
 export class ProjectComponent {
   readonly featuredProjects: FeatureProject[] = [
     {
+      title: 'Orkesta',
+      image: {
+        src: 'assets/orkesta.png',
+        alt: 'Orkesta - Digital Invitation System Dashboard',
+      },
+      duration: 'August 2025 - Present',
+      description: 'projects.orkesta.description',
+      technologies: [
+        'Angular 19',
+        'NestJS 11',
+        'TypeScript',
+        'PostgreSQL',
+        'Redis',
+        'Prisma ORM',
+        'Docker',
+        'Railway',
+        'GitHub Actions',
+        'TailwindCSS',
+        'Angular Material',
+      ],
+    },
+    {
       title: 'Swiss Premier - Mobile App',
       image: {
         src: 'assets/swiss_mobile.png',
