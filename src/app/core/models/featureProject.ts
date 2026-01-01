@@ -4,6 +4,7 @@ export interface FeatureProject {
   duration: string;
   description: string;
   technologies: string[];
+  link?: string;
 }
 
 export interface ImageInfo {

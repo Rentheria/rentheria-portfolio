@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
     this.setupScrollAnimations();
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onScroll(): void {
     // This will be handled by the IntersectionObserver
   }

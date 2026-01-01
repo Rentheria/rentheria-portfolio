@@ -69,7 +69,7 @@ export class MessageFormComponent implements OnInit {
         }`
       );
 
-      const mailtoUrl = `mailto:manuel.rentheria@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoUrl = `mailto:rentheria.dev@gmail.com?subject=${subject}&body=${body}`;
 
       window.open(mailtoUrl, '_blank');
       this.toastService.showSuccess('contact.form.success');

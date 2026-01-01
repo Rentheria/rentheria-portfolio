@@ -1,17 +1,19 @@
 <div
-  class="project-card bg-gray-800 bg-opacity-70 rounded-xl overflow-hidden relative group"
+  class="project-card bg-gray-800 bg-opacity-70 rounded-xl overflow-hidden relative group h-full flex flex-col"
 >
   <!-- Gradient border effect -->
   <div
     class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
   ></div>
 
-  <div class="relative z-10">
-    <div class="relative h-48 overflow-hidden">
+  <div class="relative z-10 flex flex-col h-full">
+    <!-- Image section - fixed height -->
+    <div class="relative h-48 overflow-hidden flex-shrink-0">
       <img
-        [src]="project.image.src"
-        [alt]="project.image.alt"
+        [src]="project().image.src"
+        [alt]="project().image.alt"
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
       />
       <div
         class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent"
@@ -22,7 +24,7 @@
         <span
           class="bg-purple-400 text-gray-900 py-1 px-3 rounded-full text-xs font-semibold shadow-lg"
         >
-          {{ project.duration }}
+          {{ project().duration }}
         </span>
       </div>
 
@@ -30,49 +32,60 @@
       <div class="absolute top-4 right-4">
         <div class="bg-gray-800/80 backdrop-blur-sm rounded-full px-3 py-1">
           <span class="text-yellow-400 text-xs font-medium"
-            >{{ project.technologies.length }}
+            >{{ project().technologies.length }}
             {{ "projects.techs" | translate }}</span
           >
         </div>
       </div>
     </div>
 
-    <div class="p-6">
-      <h3 class="text-2xl font-bold mb-3 gradient-text-electric">
-        {{ project.title }}
+    <!-- Content section - flex-grow to fill remaining space -->
+    <div class="p-6 flex flex-col flex-grow min-h-0">
+      <h3 class="text-2xl font-bold mb-3 gradient-text-electric flex-shrink-0">
+        {{ project().title }}
       </h3>
 
-      <p class="text-gray-300 mb-4 leading-relaxed text-sm">
-        {{ project.description | translate }}
+      <p class="text-gray-300 mb-4 leading-relaxed text-sm flex-grow min-h-0">
+        {{ project().description | translate }}
       </p>
 
       <!-- Technology tags with theme colors -->
-      <div class="flex flex-wrap gap-2 mb-6">
+      <div class="flex flex-wrap gap-2 mb-6 flex-shrink-0">
+        @defer (on viewport) { @for (technology of visibleTechnologies(); track
+        technology) {
         <span
           class="px-3 py-1 bg-gray-700/50 border border-gray-600 rounded-full text-xs font-medium text-gray-300 hover:bg-gray-600/50 transition-colors duration-200"
-          *ngFor="let technology of project.technologies"
         >
-          <!-- *ngFor="let technology of project.technologies.slice(0, 6)" -->
-
           {{ technology }}
         </span>
-        <!-- <span
-          *ngIf="project.technologies.length > 6"
+        } @if (shouldShowMoreBadge()) {
+        <span
           class="px-3 py-1 bg-gradient-to-r from-purple-400/20 to-blue-400/20 border border-purple-400/30 rounded-full text-xs font-medium text-purple-300"
         >
-          +{{ project.technologies.length - 6 }} more
-        </span> -->
+          +{{ remainingTechnologiesCount() }} more
+        </span>
+        } } @placeholder {
+        <div class="flex flex-wrap gap-2">
+          @for (item of placeholderItems; track item) {
+          <span
+            class="px-3 py-1 bg-gray-700/30 border border-gray-600/50 rounded-full text-xs h-6 w-20 animate-pulse"
+          ></span>
+          }
+        </div>
+        }
       </div>
 
-      <!-- View project button with theme styling -->
-      <!-- <button
-        class="w-full border border-blue-400/30 text-blue-400 py-2 px-4 rounded-lg flex items-center justify-center text-sm font-medium transition-all duration-300 group/btn"
+      <!-- View project button with theme styling - pushed to bottom -->
+      @if (project().link) {
+      <button
+        class="w-full border border-blue-400/30 text-blue-400 py-2 px-4 rounded-lg flex items-center justify-center text-sm font-medium transition-all duration-300 group/btn mt-auto flex-shrink-0"
       >
-        <span>View Project Details</span>
+        <span>View Project Page</span>
         <i
           class="fas fa-arrow-right ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"
         ></i>
-      </button> -->
+      </button>
+      }
     </div>
   </div>
 </div>

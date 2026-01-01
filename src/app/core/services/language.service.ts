@@ -29,7 +29,7 @@ export class LanguageService {
       'hero.title.development': 'Development',
       'hero.title.engineer': 'Engineer',
       'hero.subtitle.experience': 'Software Engineer with',
-      'hero.subtitle.years': '5+ years',
+      'hero.subtitle.years': '6 years',
       'hero.subtitle.experienceText':
         'of experience delivering enterprise applications and building digital products.',
       'hero.subtitle.specialized': 'Specialized in',
@@ -78,6 +78,8 @@ export class LanguageService {
         'My portfolio website built with Angular and Tailwind CSS.',
       'projects.orkesta.description':
         'Comprehensive event management system allowing organizers to create and host events with digital invitations, intelligent RSVP, interactive table planning, automated messaging, and real-time check-in. Developed with Angular 19 (Standalone Components, Signals, SSR) and NestJS 11 (Modular Architecture, Prisma ORM). Features multi-role system, WhatsApp Business API integration, and scalable architecture deployed on Railway with Docker.',
+      'projects.realDelPaso.description':
+        'Premium corporate website for luxury event venue with modern architecture, advanced SEO optimization, and lead conversion focus. Implements Server-Side Rendering (SSR) and Static Site Generation (SSG) for maximum performance and better indexing. Features interactive gallery with lightbox, contact forms, WhatsApp integration, dynamic testimonials, and responsive design with custom design system.',
 
       // Experience Section
       'experience.title': 'Professional ',
@@ -213,7 +215,7 @@ export class LanguageService {
       'hero.title.development': 'en desarrollo ',
       'hero.title.engineer': 'de software',
       'hero.subtitle.experience': 'Ingeniero de Software con',
-      'hero.subtitle.years': '5+ años',
+      'hero.subtitle.years': '6 años',
       'hero.subtitle.experienceText':
         'de experiencia entregando aplicaciones empresariales y construyendo productos digitales.',
       'hero.subtitle.specialized': 'Especializado en',
@@ -263,6 +265,8 @@ export class LanguageService {
         'Mi sitio web de portafolio construido con Angular y Tailwind CSS.',
       'projects.orkesta.description':
         'Sistema completo de gestión de eventos que permite a organizadores crear, gestionar y organizar eventos con invitaciones digitales, RSVP inteligente, planner de mesas interactivo, mensajería automatizada y check-in en tiempo real. Desarrollado con Angular 19 (Standalone Components, Signals, SSR) y NestJS 11 (Arquitectura modular, Prisma ORM). Implementa sistema multi-rol, integración con WhatsApp Business API, y arquitectura escalable desplegada en Railway con Docker.',
+      'projects.realDelPaso.description':
+        'Sitio web corporativo premium para salón de eventos de lujo con arquitectura moderna, optimización SEO avanzada y enfoque en conversión de leads. Implementa Server-Side Rendering (SSR) y Static Site Generation (SSG) para máximo rendimiento y mejor indexación. Incluye galería interactiva con lightbox, formularios de contacto, integración WhatsApp, testimonios dinámicos y diseño responsive con sistema de diseño personalizado.',
 
       // Experience Section
       'experience.title': 'Experiencia ',

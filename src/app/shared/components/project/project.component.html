@@ -33,10 +33,11 @@
       {{ "projects.subtitle" | translate }}
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
       <app-card-featured-project
         *ngFor="let project of featuredProjects; let i = index"
         [project]="project"
+        class="h-full"
       ></app-card-featured-project>
     </div>
   </div>
