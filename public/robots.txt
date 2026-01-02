@@ -1,0 +1,23 @@
+# robots.txt for Rentheria Portfolio
+# https://rentheria.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rentheria.com/sitemap.xml
+Sitemap: https://rentheria-portfolio.web.app/sitemap.xml
+
+# Disallow admin or private routes if any
+# Disallow: /admin/
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 1
+
