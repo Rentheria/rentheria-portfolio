@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-6EMZLCQL.js";
+} from "./chunk-DMLSTRB6.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -82,7 +82,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-MTES5EJZ.js";
+} from "./chunk-UGCR7KEQ.js";
 import {
   Observable,
   __async,
@@ -809,7 +809,7 @@ var EmulatedEncapsulationDomRenderer2 = class extends NoneEncapsulationDomRender
   }
 };
 
-// node_modules/@angular/platform-browser/fesm2022/browser-D-u-fknz.mjs
+// node_modules/@angular/platform-browser/fesm2022/browser-0WrrQdE0.mjs
 var BrowserDomAdapter = class _BrowserDomAdapter extends DomAdapter {
   supportsDOMEvents = true;
   static makeCurrent() {
@@ -1138,9 +1138,10 @@ var KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
     }]
   }], null);
 })();
-function bootstrapApplication(rootComponent, options) {
+function bootstrapApplication(rootComponent, options, context) {
   return internalCreateApplication(__spreadValues({
-    rootComponent
+    rootComponent,
+    platformRef: context?.platformRef
   }, createProvidersConfig(options)));
 }
 function createApplication(options) {
@@ -1251,7 +1252,7 @@ var BrowserModule = class _BrowserModule {
   }], () => [], null);
 })();
 
-// node_modules/@angular/common/fesm2022/module-z3bvLlVg.mjs
+// node_modules/@angular/common/fesm2022/module-JS82OH2B.mjs
 var HttpHandler = class {
 };
 var HttpBackend = class {
@@ -3151,9 +3152,9 @@ var HttpXsrfCookieExtractor = class _HttpXsrfCookieExtractor {
     }]
   }], null);
 })();
+var ABSOLUTE_URL_REGEX = /^(?:https?:)?\/\//i;
 function xsrfInterceptorFn(req, next) {
-  const lcUrl = req.url.toLowerCase();
-  if (!inject(XSRF_ENABLED) || req.method === "GET" || req.method === "HEAD" || lcUrl.startsWith("http://") || lcUrl.startsWith("https://")) {
+  if (!inject(XSRF_ENABLED) || req.method === "GET" || req.method === "HEAD" || ABSOLUTE_URL_REGEX.test(req.url)) {
     return next(req);
   }
   const token = inject(HttpXsrfTokenExtractor).getToken();
@@ -4408,7 +4409,7 @@ function provideClientHydration(...features) {
   }
   return makeEnvironmentProviders([typeof ngDevMode !== "undefined" && ngDevMode ? provideZoneJsCompatibilityDetector() : [], withDomHydration(), featuresKind.has(HydrationFeatureKind.NoHttpTransferCache) || hasHttpTransferCacheOptions ? [] : withHttpTransferCache({}), providers]);
 }
-var VERSION = new Version("19.2.14");
+var VERSION = new Version("19.2.18");
 
 export {
   EVENT_MANAGER_PLUGINS,
@@ -4450,14 +4451,14 @@ export {
 /*! Bundled license information:
 
 @angular/platform-browser/fesm2022/dom_renderer-DGKzginR.mjs:
-@angular/platform-browser/fesm2022/browser-D-u-fknz.mjs:
-@angular/common/fesm2022/module-z3bvLlVg.mjs:
+@angular/platform-browser/fesm2022/browser-0WrrQdE0.mjs:
+@angular/common/fesm2022/module-JS82OH2B.mjs:
 @angular/common/fesm2022/http.mjs:
 @angular/platform-browser/fesm2022/platform-browser.mjs:
   (**
-   * @license Angular v19.2.14
+   * @license Angular v19.2.18
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-LPE7XSAQ.js.map
+//# sourceMappingURL=chunk-VAHZI67T.js.map

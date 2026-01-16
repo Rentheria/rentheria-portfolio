@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+/build
+/.angular
 # Only the `browser` directory will be built under the `dist` folder
 # It will be copied to the `dist` folder when running `ng build` with the `--output-path` option.
 # You can control that behavior with the `--output-path` option.
