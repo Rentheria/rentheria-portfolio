@@ -1,5 +1,4 @@
 import {
-  ALLOW_MULTIPLE_PLATFORMS,
   ANIMATION_MODULE_TYPE,
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -502,10 +501,10 @@ import {
   ɵɵtwoWayBindingSet,
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
-  ɵɵvalidateIframeAttribute,
+  ɵɵvalidateAttribute,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-MTES5EJZ.js";
+} from "./chunk-UGCR7KEQ.js";
 import "./chunk-S35MAB2V.js";
 export {
   ANIMATION_MODULE_TYPE,
@@ -658,7 +657,6 @@ export {
   untracked,
   viewChild,
   viewChildren,
-  ALLOW_MULTIPLE_PLATFORMS as ɵALLOW_MULTIPLE_PLATFORMS,
   AfterRenderManager as ɵAfterRenderManager,
   CLIENT_RENDER_MODE_FLAG as ɵCLIENT_RENDER_MODE_FLAG,
   CONTAINER_HEADER_OFFSET as ɵCONTAINER_HEADER_OFFSET,
@@ -1013,7 +1011,7 @@ export {
   ɵɵtwoWayBindingSet,
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty,
-  ɵɵvalidateIframeAttribute,
+  ɵɵvalidateAttribute,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
 };
