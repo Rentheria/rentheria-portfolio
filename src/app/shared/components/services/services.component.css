@@ -1,0 +1,50 @@
+.gradient-border {
+  scale: 1.02;
+  box-shadow: var(--glow-electric);
+  animation: holographic 4s ease-in-out infinite;
+}
+
+@keyframes holographic {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-animate[data-animation="fadeInUp"] {
+  transform: translateY(30px);
+}
+
+.scroll-animate[data-animation="fadeInUp"].animate {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    transition: opacity 0.2s ease;
+    transform: none !important;
+  }
+
+  .scroll-animate.animate {
+    transform: none !important;
+  }
+
+  .gradient-border {
+    animation: none;
+  }
+}

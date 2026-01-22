@@ -1,0 +1,82 @@
+<section id="problems" class="py-20 bg-gray-800 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-5">
+    <div
+      class="absolute top-20 left-10 w-32 h-32 bg-yellow-400 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute bottom-20 right-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-purple-400 rounded-full blur-3xl"
+    ></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <h2
+      class="text-5xl md:text-7xl font-bold mb-10 letter-spacing-widest text-center scroll-animate"
+      data-animation="fadeInUp"
+      data-delay="0"
+    >
+      <span class="gradient-text-electric">{{
+        "problems.title" | translate
+      }}</span>
+      <span class="gradient-text-cyber">{{ "problems.title2" | translate }}</span>
+    </h2>
+
+    <p
+      class="text-gray-400 text-lg md:text-xl text-center max-w-2xl mx-auto mb-12 scroll-animate"
+      data-animation="fadeInUp"
+      data-delay="200"
+    >
+      {{ "problems.subtitle" | translate }}
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div
+        *ngFor="let problem of problems; let i = index"
+        class="bg-gray-800 bg-opacity-50 rounded-lg p-6 gradient-border transition-all duration-300 scroll-animate hover:scale-105"
+        [attr.data-animation]="'fadeInUp'"
+        [attr.data-delay]="(i + 1) * 100 + 400"
+      >
+        <div
+          class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center"
+          [ngClass]="{
+            'bg-yellow-400 bg-opacity-20': problem.color === 'yellow',
+            'bg-blue-400 bg-opacity-20': problem.color === 'blue',
+            'bg-purple-400 bg-opacity-20': problem.color === 'purple',
+            'bg-green-400 bg-opacity-20': problem.color === 'green',
+            'bg-orange-400 bg-opacity-20': problem.color === 'orange'
+          }"
+        >
+          <i
+            class="fas text-2xl"
+            [class]="problem.icon"
+            [ngClass]="{
+              'text-yellow-400': problem.color === 'yellow',
+              'text-blue-400': problem.color === 'blue',
+              'text-purple-400': problem.color === 'purple',
+              'text-green-400': problem.color === 'green',
+              'text-orange-400': problem.color === 'orange'
+            }"
+          ></i>
+        </div>
+        <h3
+          class="text-xl font-bold mb-3 text-center"
+          [ngClass]="{
+            'text-yellow-400': problem.color === 'yellow',
+            'text-blue-400': problem.color === 'blue',
+            'text-purple-400': problem.color === 'purple',
+            'text-green-400': problem.color === 'green',
+            'text-orange-400': problem.color === 'orange'
+          }"
+        >
+          {{ "problems." + problem.key + ".title" | translate }}
+        </h3>
+        <p class="text-gray-300 leading-relaxed text-center">
+          {{ "problems." + problem.key + ".description" | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

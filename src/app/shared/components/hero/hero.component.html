@@ -24,21 +24,16 @@
         }}</span>
       </h1>
       <section
-        class="text-gray-300 text-lg md:text-2xl mb-2 animate__animated animate__fadeIn animate__delay-1s"
+        class="text-gray-300 text-lg md:text-2xl mb-4 animate__animated animate__fadeIn animate__delay-1s"
       >
-        <p>
+        <p class="mb-3">
           {{ "hero.subtitle.experience" | translate }}
-          <span class="text-yellow-400 font-bold">{{
-            "hero.subtitle.years" | translate
-          }}</span>
+        </p>
+        <p class="mb-3">
           {{ "hero.subtitle.experienceText" | translate }}
         </p>
-        <p>
-          {{ "hero.subtitle.specialized" | translate }}
-          <span class="text-blue-400 font-semibold">Angular</span>,
-          <span class="text-purple-400 font-semibold">Ionic</span>, and
-          <span class="text-orange-400 font-semibold">NestJS</span>
-          {{ "hero.subtitle.creating" | translate }}
+        <p class="text-xl md:text-2xl font-semibold text-gray-200 italic mt-4 mb-2">
+          {{ "hero.manifesto" | translate }}
         </p>
       </section>
 

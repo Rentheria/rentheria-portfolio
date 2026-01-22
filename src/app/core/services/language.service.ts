@@ -25,16 +25,16 @@ export class LanguageService {
       'nav.contact': 'Contact',
 
       // Hero Section
-      'hero.title.software': 'Software',
-      'hero.title.development': 'Development',
-      'hero.title.engineer': 'Engineer',
-      'hero.subtitle.experience': 'Software Engineer with',
-      'hero.subtitle.years': '6 years',
+      'hero.title.software': 'Premium',
+      'hero.title.development': 'Software',
+      'hero.title.engineer': 'Architecture',
+      'hero.subtitle.experience': 'I build scalable systems that drive business growth.',
+      'hero.subtitle.years': '',
       'hero.subtitle.experienceText':
-        'of experience delivering enterprise applications and building digital products.',
-      'hero.subtitle.specialized': 'Specialized in',
-      'hero.subtitle.creating':
-        '— creating scalable, high-impact solutions while staying ahead of emerging technologies.',
+        'For founders, startups, and enterprises who need robust solutions, not quick fixes.',
+      'hero.subtitle.specialized': '',
+      'hero.subtitle.creating': '',
+      'hero.manifesto': 'Technology that scales. Architecture that lasts. Results that matter.',
       'hero.button.viewWork': 'View My Work',
       'hero.button.experience': 'Experience',
       'hero.button.getInTouch': 'Get In Touch',
@@ -43,9 +43,9 @@ export class LanguageService {
       'about.title': 'About ',
       'about.title2': 'Me',
       'about.description1':
-        'Manuel Alejandro Hernandez Renteria is a Web UI Developer with over 5 years of experience in enterprise web and hybrid application development. He has led and contributed to projects involving Angular 17, micro-frontend architectures, and cross-platform solutions built with Ionic and NestJS.',
+        'I am a solution architect who thinks beyond code. With over 6 years crafting enterprise applications and SaaS platforms, I design systems that scale with your business, not against it.',
       'about.description2':
-        'His strengths include scalable front-end design, API integration, CI/CD pipelines, and performance optimization. Known for translating business needs into robust interfaces and collaborating effectively within cross-functional Agile teams.',
+        'My approach centers on quality, maintainability, and strategic technical decisions. I translate complex business requirements into elegant, scalable architectures—delivering real value that drives growth, not just features that look good on paper.',
       'about.skills.frontend': 'Front-end',
       'about.skills.frontendDesc': 'Angular, TypeScript',
       'about.skills.mobile': 'Mobile',
@@ -166,7 +166,7 @@ export class LanguageService {
       // Contact Section
       'contact.title': 'Get In ',
       'contact.title2': 'Touch',
-      'contact.subtitle': "Let's work together to bring your ideas to life",
+      'contact.subtitle': 'Ready to build something exceptional? Let\'s discuss your project, explore possibilities, and turn your vision into a scalable reality. Schedule a call or send a message—I respond to every inquiry.',
       'contact.email': 'Email',
       'contact.location': 'Location',
       'contact.locationText': 'Available for Remote Work',
@@ -195,6 +195,66 @@ export class LanguageService {
       'contact.form.validation.maxLength': 'must not exceed',
       'contact.form.validation.characters': 'characters',
 
+      // Problems Solved Section
+      'problems.title': 'Problems ',
+      'problems.title2': 'Solved',
+      'problems.subtitle': 'I solve the technical challenges that hold your business back',
+      'problems.item1.title': 'Systems that don\'t scale',
+      'problems.item1.description': 'When growth hits, your infrastructure shouldn\'t break. I build architectures that handle 10x traffic without rewriting.',
+      'problems.item2.title': 'Slow or unmaintainable products',
+      'problems.item2.description': 'Performance issues and technical debt kill momentum. I optimize existing systems and establish patterns that prevent future problems.',
+      'problems.item3.title': 'Fragile architectures',
+      'problems.item3.description': 'One change shouldn\'t break everything. I design modular, resilient systems that adapt to changing requirements.',
+      'problems.item4.title': 'Technical debt that blocks growth',
+      'problems.item4.description': 'Legacy code shouldn\'t prevent innovation. I refactor strategically, reducing debt while maintaining stability.',
+      'problems.item5.title': 'Teams blocked by bad decisions',
+      'problems.item5.description': 'Poor technical choices create bottlenecks. I provide clear architecture guidance that unblocks your team and accelerates delivery.',
+
+      // Services Section
+      'services.title': 'Services',
+      'services.subtitle': 'Premium solutions for ambitious projects',
+      'services.web.title': 'Web Applications & SaaS',
+      'services.web.description': 'Full-stack development of scalable web applications and SaaS platforms. From MVPs to enterprise systems, I deliver production-ready solutions with modern architecture, security, and performance built in.',
+      'services.frontend.title': 'Advanced Frontend Development',
+      'services.frontend.description': 'Enterprise-grade frontend development with Angular, focusing on performance, maintainability, and exceptional user experiences. I build interfaces that are fast, accessible, and scalable.',
+      'services.backend.title': 'Backend & APIs',
+      'services.backend.description': 'Robust backend systems and RESTful APIs using NestJS. Secure, documented, and optimized for scale. I design APIs that serve your frontend, mobile apps, and third-party integrations seamlessly.',
+      'services.architecture.title': 'Architecture, Scalability & Performance',
+      'services.architecture.description': 'System design and optimization for high-traffic applications. I architect solutions that scale horizontally, perform under load, and maintain low latency as your user base grows.',
+      'services.mvp.title': 'MVPs & Digital Products',
+      'services.mvp.description': 'Rapid development of minimum viable products that validate ideas quickly. I build MVPs with production-quality code, so scaling to full products is seamless, not a rewrite.',
+      'services.enterprise.title': 'Enterprise Systems',
+      'services.enterprise.description': 'Complex, mission-critical systems for large organizations. Multi-tenant architectures, microservices, security compliance, and integration with existing enterprise infrastructure.',
+
+      // Experience Proof Section
+      'experienceProof.title': 'Experience',
+      'experienceProof.title2': 'Proof',
+      'experienceProof.subtitle': 'Real projects, real results',
+      'experienceProof.story':
+        'Over 6 years, I\'ve transformed ideas into production systems that serve thousands of users. I\'ve architected SaaS platforms with multi-tenant capabilities, built enterprise applications handling complex business logic, and delivered mobile solutions that work seamlessly across platforms. My work spans insurance platforms, financial services, media companies, and innovative startups—each project requiring deep understanding of both technology and business needs. I collaborate directly with founders, CTOs, product managers, and stakeholders, translating vision into scalable reality. From initial architecture to deployment and optimization, I own the full lifecycle, ensuring systems are built to last, not just to launch.',
+
+      // Tech Stack Section
+      'techStack.title': 'Technology',
+      'techStack.title2': 'Stack',
+      'techStack.subtitle': 'Strategic tools for strategic results',
+      'techStack.description':
+        'I choose technology based on what your business needs, not the latest trend. Angular 17+ for complex, maintainable frontends. NestJS for scalable, enterprise-ready backends. Ionic for cross-platform mobile solutions. Cloud infrastructure, CI/CD pipelines, and DevOps practices that ensure reliable deployments. Every tool serves a purpose: building systems that scale, perform, and evolve with your business. I make technical decisions that align with your goals, budget, and timeline—delivering solutions that work today and adapt tomorrow.',
+
+      // Why Work With Me Section
+      'whyWork.title': 'Why Work ',
+      'whyWork.title2': 'With Me',
+      'whyWork.subtitle': 'What sets premium development apart',
+      'whyWork.item1.title': 'Clear, constant communication',
+      'whyWork.item1.description': 'You\'ll always know where we stand. Regular updates, transparent timelines, and proactive problem-solving. No surprises, no excuses.',
+      'whyWork.item2.title': 'Real product ownership',
+      'whyWork.item2.description': 'I treat your product as if it were mine. Every decision considers long-term impact, user experience, and business goals—not just what\'s easiest to code.',
+      'whyWork.item3.title': 'Business-oriented thinking',
+      'whyWork.item3.description': 'Technology serves your business, not the other way around. I ask the right questions, challenge assumptions, and propose solutions that drive real value.',
+      'whyWork.item4.title': 'Quality & maintainability',
+      'whyWork.item4.description': 'Code that your team can understand, extend, and maintain. Clean architecture, comprehensive documentation, and patterns that scale.',
+      'whyWork.item5.title': 'Long-term vision & scalability',
+      'whyWork.item5.description': 'I build for growth. Every system is designed to scale, adapt, and evolve. Your investment today pays dividends as you grow.',
+
       // Common
       'common.loading': 'Loading...',
       'common.error': 'Error',
@@ -211,16 +271,16 @@ export class LanguageService {
       'nav.contact': 'Contacto',
 
       // Hero Section
-      'hero.title.software': 'Ingeniero ',
-      'hero.title.development': 'en desarrollo ',
-      'hero.title.engineer': 'de software',
-      'hero.subtitle.experience': 'Ingeniero de Software con',
-      'hero.subtitle.years': '6 años',
+      'hero.title.software': 'Arquitectura',
+      'hero.title.development': 'de Software',
+      'hero.title.engineer': 'Premium',
+      'hero.subtitle.experience': 'Construyo sistemas escalables que impulsan el crecimiento empresarial.',
+      'hero.subtitle.years': '',
       'hero.subtitle.experienceText':
-        'de experiencia entregando aplicaciones empresariales y construyendo productos digitales.',
-      'hero.subtitle.specialized': 'Especializado en',
-      'hero.subtitle.creating':
-        '— creando soluciones escalables y de alto impacto mientras me mantengo al día con tecnologías emergentes.',
+        'Para fundadores, startups y empresas que necesitan soluciones robustas, no parches rápidos.',
+      'hero.subtitle.specialized': '',
+      'hero.subtitle.creating': '',
+      'hero.manifesto': 'Tecnología que escala. Arquitectura que perdura. Resultados que importan.',
       'hero.button.viewWork': 'Ver Mi Trabajo',
       'hero.button.experience': 'Experiencia',
       'hero.button.getInTouch': 'Ponte en Contacto',
@@ -229,9 +289,9 @@ export class LanguageService {
       'about.title': 'Acerca ',
       'about.title2': 'de Mí',
       'about.description1':
-        'Manuel Alejandro Hernandez Renteria es un Desarrollador Web UI con más de 5 años de experiencia en desarrollo de aplicaciones web empresariales e híbridas. Ha liderado y contribuido a proyectos que involucran Angular 17, arquitecturas de micro-frontend y soluciones multiplataforma construidas con Ionic y NestJS.',
+        'Soy un arquitecto de soluciones que piensa más allá del código. Con más de 6 años construyendo aplicaciones empresariales y plataformas SaaS, diseño sistemas que escalan con tu negocio, no en su contra.',
       'about.description2':
-        'Sus fortalezas incluyen diseño front-end escalable, integración de APIs, pipelines CI/CD y optimización de rendimiento. Conocido por traducir necesidades empresariales en interfaces robustas y colaborar efectivamente dentro de equipos ágiles multifuncionales.',
+        'Mi enfoque se centra en calidad, mantenibilidad y decisiones técnicas estratégicas. Traduzco requisitos empresariales complejos en arquitecturas elegantes y escalables—entregando valor real que impulsa el crecimiento, no solo características que se ven bien en papel.',
       'about.skills.frontend': 'Front-end',
       'about.skills.frontendDesc': 'Angular, TypeScript',
       'about.skills.mobile': 'Móvil',
@@ -353,7 +413,7 @@ export class LanguageService {
       // Contact Section
       'contact.title': 'Ponte en ',
       'contact.title2': 'Contacto',
-      'contact.subtitle': 'Trabajemos juntos para dar vida a tus ideas',
+      'contact.subtitle': '¿Listo para construir algo excepcional? Hablemos de tu proyecto, exploremos posibilidades y convirtamos tu visión en una realidad escalable. Agenda una llamada o envía un mensaje—respondo a cada consulta.',
       'contact.email': 'Correo',
       'contact.location': 'Ubicación',
       'contact.locationText': 'Disponible para Trabajo Remoto',
@@ -383,6 +443,66 @@ export class LanguageService {
       'contact.form.validation.minLength': 'debe tener al menos',
       'contact.form.validation.maxLength': 'no debe exceder',
       'contact.form.validation.characters': 'caracteres',
+
+      // Problems Solved Section
+      'problems.title': 'Problemas ',
+      'problems.title2': 'Resueltos',
+      'problems.subtitle': 'Resuelvo los desafíos técnicos que frenan tu negocio',
+      'problems.item1.title': 'Sistemas que no escalan',
+      'problems.item1.description': 'Cuando llega el crecimiento, tu infraestructura no debería romperse. Construyo arquitecturas que manejan 10x el tráfico sin reescribir.',
+      'problems.item2.title': 'Productos lentos o difíciles de mantener',
+      'problems.item2.description': 'Los problemas de rendimiento y la deuda técnica matan el impulso. Optimizo sistemas existentes y establezco patrones que previenen problemas futuros.',
+      'problems.item3.title': 'Arquitecturas frágiles',
+      'problems.item3.description': 'Un cambio no debería romper todo. Diseño sistemas modulares y resilientes que se adaptan a requisitos cambiantes.',
+      'problems.item4.title': 'Deuda técnica que bloquea el crecimiento',
+      'problems.item4.description': 'El código legacy no debería prevenir la innovación. Refactorizo estratégicamente, reduciendo deuda mientras mantengo estabilidad.',
+      'problems.item5.title': 'Equipos bloqueados por malas decisiones',
+      'problems.item5.description': 'Las malas decisiones técnicas crean cuellos de botella. Proporciono guía arquitectónica clara que desbloquea tu equipo y acelera la entrega.',
+
+      // Services Section
+      'services.title': 'Servicios',
+      'services.subtitle': 'Soluciones premium para proyectos ambiciosos',
+      'services.web.title': 'Aplicaciones Web & SaaS',
+      'services.web.description': 'Desarrollo full-stack de aplicaciones web escalables y plataformas SaaS. Desde MVPs hasta sistemas empresariales, entrego soluciones listas para producción con arquitectura moderna, seguridad y rendimiento integrados.',
+      'services.frontend.title': 'Desarrollo Frontend Avanzado',
+      'services.frontend.description': 'Desarrollo frontend de nivel empresarial con Angular, enfocado en rendimiento, mantenibilidad y experiencias de usuario excepcionales. Construyo interfaces rápidas, accesibles y escalables.',
+      'services.backend.title': 'Backend & APIs',
+      'services.backend.description': 'Sistemas backend robustos y APIs RESTful usando NestJS. Seguros, documentados y optimizados para escala. Diseño APIs que sirven a tu frontend, aplicaciones móviles e integraciones de terceros sin problemas.',
+      'services.architecture.title': 'Arquitectura, Escalabilidad & Rendimiento',
+      'services.architecture.description': 'Diseño de sistemas y optimización para aplicaciones de alto tráfico. Arquitecto soluciones que escalan horizontalmente, rinden bajo carga y mantienen baja latencia mientras crece tu base de usuarios.',
+      'services.mvp.title': 'MVPs & Productos Digitales',
+      'services.mvp.description': 'Desarrollo rápido de productos mínimos viables que validan ideas rápidamente. Construyo MVPs con código de calidad de producción, para que escalar a productos completos sea fluido, no una reescritura.',
+      'services.enterprise.title': 'Sistemas Empresariales',
+      'services.enterprise.description': 'Sistemas complejos y críticos para grandes organizaciones. Arquitecturas multi-tenant, microservicios, cumplimiento de seguridad e integración con infraestructura empresarial existente.',
+
+      // Experience Proof Section
+      'experienceProof.title': 'Prueba de ',
+      'experienceProof.title2': 'Experiencia',
+      'experienceProof.subtitle': 'Proyectos reales, resultados reales',
+      'experienceProof.story':
+        'Durante más de 6 años, he transformado ideas en sistemas de producción que sirven a miles de usuarios. He arquitectado plataformas SaaS con capacidades multi-tenant, construido aplicaciones empresariales manejando lógica de negocio compleja, y entregado soluciones móviles que funcionan perfectamente entre plataformas. Mi trabajo abarca plataformas de seguros, servicios financieros, empresas de medios e startups innovadoras—cada proyecto requiere comprensión profunda tanto de tecnología como de necesidades de negocio. Colaboro directamente con fundadores, CTOs, gerentes de producto y stakeholders, traduciendo visión en realidad escalable. Desde la arquitectura inicial hasta el despliegue y optimización, me hago cargo del ciclo completo, asegurando que los sistemas estén construidos para durar, no solo para lanzar.',
+
+      // Tech Stack Section
+      'techStack.title': 'Stack ',
+      'techStack.title2': 'Tecnológico',
+      'techStack.subtitle': 'Herramientas estratégicas para resultados estratégicos',
+      'techStack.description':
+        'Elijo tecnología basándome en lo que tu negocio necesita, no la última tendencia. Angular 17+ para frontends complejos y mantenibles. NestJS para backends escalables y listos para empresa. Ionic para soluciones móviles multiplataforma. Infraestructura en la nube, pipelines CI/CD y prácticas DevOps que aseguran despliegues confiables. Cada herramienta sirve un propósito: construir sistemas que escalan, rinden y evolucionan con tu negocio. Tomo decisiones técnicas que se alinean con tus objetivos, presupuesto y cronograma—entregando soluciones que funcionan hoy y se adaptan mañana.',
+
+      // Why Work With Me Section
+      'whyWork.title': 'Por Qué ',
+      'whyWork.title2': 'Trabajar Conmigo',
+      'whyWork.subtitle': 'Lo que diferencia al desarrollo premium',
+      'whyWork.item1.title': 'Comunicación clara y constante',
+      'whyWork.item1.description': 'Siempre sabrás dónde estamos. Actualizaciones regulares, cronogramas transparentes y resolución proactiva de problemas. Sin sorpresas, sin excusas.',
+      'whyWork.item2.title': 'Ownership real del producto',
+      'whyWork.item2.description': 'Trato tu producto como si fuera mío. Cada decisión considera impacto a largo plazo, experiencia de usuario y objetivos de negocio—no solo lo más fácil de codificar.',
+      'whyWork.item3.title': 'Pensamiento orientado a negocio',
+      'whyWork.item3.description': 'La tecnología sirve a tu negocio, no al revés. Hago las preguntas correctas, desafío suposiciones y propongo soluciones que generan valor real.',
+      'whyWork.item4.title': 'Calidad & mantenibilidad',
+      'whyWork.item4.description': 'Código que tu equipo puede entender, extender y mantener. Arquitectura limpia, documentación completa y patrones que escalan.',
+      'whyWork.item5.title': 'Visión a largo plazo & escalabilidad',
+      'whyWork.item5.description': 'Construyo para crecer. Cada sistema está diseñado para escalar, adaptarse y evolucionar. Tu inversión hoy paga dividendos mientras creces.',
 
       // Common
       'common.loading': 'Cargando...',

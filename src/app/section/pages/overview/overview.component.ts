@@ -2,7 +2,12 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeroComponent } from '../../../shared/components/hero/hero.component';
 import { AboutComponent } from '../../../shared/components/about/about.component';
+import { ProblemsSolvedComponent } from '../../../shared/components/problems-solved/problems-solved.component';
+import { ServicesComponent } from '../../../shared/components/services/services.component';
+import { ExperienceProofComponent } from '../../../shared/components/experience-proof/experience-proof.component';
 import { ProjectComponent } from '../../../shared/components/project/project.component';
+import { TechStackComponent } from '../../../shared/components/tech-stack/tech-stack.component';
+import { WhyWorkWithMeComponent } from '../../../shared/components/why-work-with-me/why-work-with-me.component';
 import { CareerHistoryComponent } from '../../../shared/components/career-history/career-history.component';
 import { ContactComponent } from '../../../shared/components/contact/contact.component';
 
@@ -11,7 +16,12 @@ import { ContactComponent } from '../../../shared/components/contact/contact.com
   imports: [
     HeroComponent,
     AboutComponent,
+    ProblemsSolvedComponent,
+    ServicesComponent,
+    ExperienceProofComponent,
     ProjectComponent,
+    TechStackComponent,
+    WhyWorkWithMeComponent,
     CareerHistoryComponent,
     ContactComponent,
     CommonModule,
@@ -23,7 +33,12 @@ export class OverviewComponent implements OnInit, AfterViewInit {
   componentsLoaded = {
     hero: true,
     about: false,
+    problems: false,
+    services: false,
+    'experience-proof': false,
     projects: false,
+    'tech-stack': false,
+    'why-work': false,
     experience: false,
     contact: false,
   };
